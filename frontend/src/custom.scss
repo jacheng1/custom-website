@@ -1,0 +1,127 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+$theme-colors: (
+    "custom-blue": #0a192f,
+    "custom-green": #58e8c8,
+    "custom-light-gray": #ccd6f6,
+    "custom-gray": #8892b0,
+);
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a192f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8892b0;
+    min-height: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ccd6f6;
+}
+
+* {
+    font-family: "Terminal", monospace !important;
+}
+
+nav {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    top: 0;
+}
+
+.container {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.container-fluid {
+    position: relative !important;
+    z-index: 15 !important;
+}
+
+#hue-effect {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: rgba(22, 50, 95, 0.8);
+    box-shadow: 0px 0px 500px 150px rgba(22, 50, 95, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-out;
+    z-index: 5;
+}
+
+.link-number {
+    color: #58e8c8 !important;
+}
+
+.btn-outline-light {
+    color: #8892b0 !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    position: relative !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+    color: #58e8c8 !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.btn-outline-light::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 100% !important;
+    transform: scaleX(0) !important;
+    height: 2px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background-color: #58e8c8 !important;
+    transition: transform 0.25s ease-out !important;
+}
+
+.btn-outline-light:hover::after {
+    transform: scaleX(1) !important;
+    transform-origin: bottom left !important;
+}
+  
+.btn-outline-success {
+    color: #58e8c8 !important;
+    border-color: #58e8c8 !important;
+}
+
+.btn-outline-success:hover {
+    color: #FFFFFF !important;
+    background-color: #58e8c8 !important;
+}
+
+.btn-custom {
+    padding: 15px 25px !important;
+}
+
+.intro-text {
+    color: #58e8c8 !important;
+}
+
+.text-light-gray {
+    color: #ccd6f6 !important;
+}
+
+.text-gray {
+    color: #8892b0 !important;
+}
+
+@import "bootstrap/scss/bootstrap";
