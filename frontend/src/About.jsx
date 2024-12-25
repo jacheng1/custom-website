@@ -1,10 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import logo from '/logo.svg';
 import './custom.scss';
 
 function Header() {
+  const [scrollDirection, setScrollDirection] = useState("up");
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   React.useEffect(() => {
     const hue = document.getElementById("hue-effect");
     const handleMouseMove = (e) => {
@@ -19,7 +39,7 @@ function Header() {
   return (
     <>
       <div id="hue-effect"></div>
-      <nav className="navbar navbar-light bg-custom-blue p-4 fixed-top">
+      <nav className={`navbar navbar-light bg-custom-blue p-4 fixed-top ${scrollDirection === "down" ? "hide" : "show"}`}>
         <div className="container-fluid">
           <img src={logo} className="logo" alt="Initials logo" width="50" height="50" />
           <form className="d-flex ms-auto align-items-center">
