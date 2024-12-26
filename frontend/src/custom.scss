@@ -9,8 +9,16 @@ $theme-colors: (
     "custom-gray": #8892b0,
 );
 
+* {
+    font-family: "Terminal", monospace !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -18,23 +26,19 @@ $theme-colors: (
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #8892b0;
+    background: #525869;
     min-height: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ccd6f6;
-}
-
-* {
-    font-family: "Terminal", monospace !important;
+    background: #8892b0;
 }
 
 .fixed-left-sidebar {
     background-color: transparent;
     position: fixed;
     left: 0;
-    top: 30%;
+    top: 35%;
     bottom: 0;
     width: 60px;
     display: flex;
@@ -55,7 +59,7 @@ $theme-colors: (
 }
 
 .vertical-line {
-    background-color: #8892b0;
+    background-color: #525869;
     width: 1px;
     flex-grow: 1;
     margin-top: 1rem;
@@ -162,6 +166,13 @@ $theme-colors: (
 
 .text-gray {
     color: #8892b0 !important;
+}
+
+.horizontal-line {
+    height: 1px;
+    width: 30%;
+    background-color: #525869;
+    margin-left: 1rem;
 }
 
 @import "bootstrap/scss/bootstrap";

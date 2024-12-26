@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import logo from '/logo.svg';
 import './custom.scss';
 
-function Header() {
+function Home() {
   const [scrollDirection, setScrollDirection] = useState("up");
 
   // useEffect for handling navbar appearing/disappearing on scroll
@@ -67,46 +67,91 @@ function Header() {
         <div className="container-fluid">
           <img src={logo} className="logo" alt="Initials logo" width="50" height="50" />
           <form className="d-flex ms-auto align-items-center">
-            <Link to="/" className="btn btn-outline-light ms-3">
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn btn-outline-light ms-3"
+            >
               <span className="link-number">01.</span> About
-            </Link>
-            <Link to="/experience" className="btn btn-outline-light ms-3">
+            </button>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("experience").scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn btn-outline-light ms-3"
+            >
               <span className="link-number">02.</span> Experience
-            </Link>
-            <Link to="/projects" className="btn btn-outline-light ms-3">
+            </button>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn btn-outline-light ms-3"
+            >
               <span className="link-number">03.</span> Projects
-            </Link>
-            <Link to="/contact" className="btn btn-outline-light ms-3">
+            </button>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn btn-outline-light ms-3"
+            >
               <span className="link-number">04.</span> Contact
-            </Link>
+            </button>
             <Link to="/resume" className="btn btn-outline-success ms-3">
               Resume
             </Link>
           </form>
         </div>
       </nav>
-      <div className="intro-section bg-custom-blue text-start text-light pt-5 pb-5 mt-5">
+      <div id="about" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5 mt-5">
         <div className="container p-4">
           <p className="intro-text">Hi, my name is</p>
           <h1 className="display-4 fw-bold text-light-gray">Jacky Cheng.</h1>
           <h1 className="display-4 fw-bold text-gray">I build full-stack applications.</h1>
           <p className="text-gray">
-            I am a computer science student at the University of California, Irvine
+            I am a computer science student at the University of
             <br />
-            looking to design and implement intuitive, user-centric solutions.
+            California, Irvine looking to design and implement
+            <br />
+            intuitive, user-centric solutions.
           </p>
           <Link to="/resume" className="btn btn-outline-success btn-custom mt-5 mb-5">
             Check out my work!
           </Link>
         </div>
       </div>
-      <div className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
-        <div className="container p-4">
-          <p className="text">Pending.</p>
+      <div id="experience" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
+        <div className="container p-4 d-flex align-items-center">
+          <h3 className="fw-bold text-light-gray m-5">
+            <span className="intro-text">02.</span> Experience
+          </h3>
+          <div className="horizontal-line"></div>
+        </div>
+      </div>
+      <div id="projects" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
+        <div className="container p-4 d-flex align-items-center">
+          <h3 className="fw-bold text-light-gray m-5">
+            <span className="intro-text">03.</span> Projects
+          </h3>
+          <div className="horizontal-line"></div>
+        </div>
+      </div>
+      <div id="contact" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
+        <div className="container p-4 d-flex align-items-center">
+          <h3 className="fw-bold text-light-gray m-5">
+            <span className="intro-text">04.</span> Contact
+          </h3>
+          <div className="horizontal-line"></div>
         </div>
       </div>
     </>
   );
 }
 
-export default Header;
+export default Home;
