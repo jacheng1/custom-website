@@ -7,6 +7,7 @@ import './custom.scss';
 
 function Home() {
   const [scrollDirection, setScrollDirection] = useState("up");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // useEffect for handling navbar appearing/disappearing on scroll
   useEffect(() => {
@@ -23,6 +24,9 @@ function Home() {
 
       // Track latest Y-direction of scroll
       lastScrollY = window.scrollY;
+
+      // set isScrolled to true, if user scrolls away from top of page
+      setIsScrolled(window.scrollY > 0);
     };
 
     // Add event listener to call handleScroll upon scrolling
@@ -63,7 +67,7 @@ function Home() {
         </a>
         <div className="vertical-line"></div>
       </div>
-      <nav className={`navbar navbar-light bg-custom-blue p-4 fixed-top ${scrollDirection === "down" ? "hide" : "show"}`}>
+      <nav className={`navbar navbar-light bg-custom-blue p-4 fixed-top ${scrollDirection === "down" ? "hide" : "show"} ${isScrolled ? "navbar-scrolled" : ""}`}>
         <div className="container-fluid">
           <img src={logo} className="logo" alt="Initials logo" width="50" height="50" />
           <form className="d-flex ms-auto align-items-center">
@@ -71,6 +75,7 @@ function Home() {
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+                e.target.blur();
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -80,6 +85,7 @@ function Home() {
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("experience").scrollIntoView({ behavior: "smooth" });
+                e.target.blur();
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -89,6 +95,7 @@ function Home() {
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+                e.target.blur();
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -98,6 +105,7 @@ function Home() {
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+                e.target.blur();
               }}
               className="btn btn-outline-light ms-3"
             >
