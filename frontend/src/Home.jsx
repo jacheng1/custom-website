@@ -111,9 +111,9 @@ function Home() {
             >
               <span className="link-number">04.</span> Contact
             </button>
-            <Link to="/resume" className="btn btn-outline-success ms-3">
+            <a className="btn btn-outline-success ms-3" href="https://drive.google.com/file/d/15n2c06tI7ZQMvMnUexmJjzAaJ_TuJ4Rq/view" target="_blank" rel="noopener noreferrer">
               Resume
-            </Link>
+            </a>
           </form>
         </div>
       </nav>
@@ -129,9 +129,9 @@ function Home() {
             <br />
             intuitive, user-centric solutions.
           </p>
-          <Link to="/resume" className="btn btn-outline-success btn-custom mt-5 mb-5">
+          <a className="btn btn-outline-success btn-custom mt-5 mb-5" href="https://drive.google.com/file/d/15n2c06tI7ZQMvMnUexmJjzAaJ_TuJ4Rq/view" target="_blank" rel="noopener noreferrer">
             Check out my work!
-          </Link>
+          </a>
         </div>
       </div>
       <div id="experience" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
@@ -159,11 +159,11 @@ function Home() {
           <div className="horizontal-line-contact"></div>
         </div>
         <div className="container p-4 text-center">
-          <h2 className="text-light-gray">Let's connect.</h2>
+          <h2 className="text-light-gray">Let&apos;s connect!</h2>
           <p className="text-gray">
-              Currently open to new projects, internship role inquiries, 
+              Currently open to project work, internship role inquiries, 
               <br />
-              or other opportunities.
+              and related opportunities.
           </p>
           <a className="btn btn-outline-success btn-custom mt-4 mb-5" href="mailto:chjack568@gmail.com" target="_blank" rel="noopener noreferrer">
             Send Message
@@ -174,7 +174,7 @@ function Home() {
         <div className="container text-center">
           <img 
             src={logo} 
-            className="logo mb-3" 
+            className="logo mb-5" 
             alt="Initials logo" 
             width="50" 
             height="50"
