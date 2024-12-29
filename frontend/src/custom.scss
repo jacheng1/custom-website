@@ -65,6 +65,12 @@ html {
     margin-top: 1rem;
 }
 
+.logo {
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+}
+
 .navbar {
     position: fixed !important;
     z-index: 20 !important;
@@ -176,6 +182,13 @@ html {
 .horizontal-line {
     height: 1px;
     width: 30%;
+    background-color: #525869;
+    margin-left: 1rem;
+}
+
+.horizontal-line-contact {
+    height: 1px;
+    width: 15%;
     background-color: #525869;
     margin-left: 1rem;
 }

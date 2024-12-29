@@ -151,11 +151,40 @@ function Home() {
         </div>
       </div>
       <div id="contact" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
-        <div className="container p-4 d-flex align-items-center">
+        <div className="container p-4 d-flex align-items-center justify-content-center">
+          <div className="horizontal-line-contact"></div>
           <h3 className="fw-bold text-light-gray m-5">
             <span className="intro-text">04.</span> Contact
           </h3>
-          <div className="horizontal-line"></div>
+          <div className="horizontal-line-contact"></div>
+        </div>
+        <div className="container p-4 text-center">
+          <h2 className="text-light-gray">Let's connect.</h2>
+          <p className="text-gray">
+              Currently open to new projects, internship role inquiries, 
+              <br />
+              or other opportunities.
+          </p>
+          <a className="btn btn-outline-success btn-custom mt-4 mb-5" href="mailto:chjack568@gmail.com" target="_blank" rel="noopener noreferrer">
+            Send Message
+          </a>
+        </div>
+      </div>
+      <div className="intro-section bg-custom-blue text-light d-flex align-items-center justify-content-center pt-5 pb-5">
+        <div className="container text-center">
+          <img 
+            src={logo} 
+            className="logo mb-3" 
+            alt="Initials logo" 
+            width="50" 
+            height="50"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+              e.target.blur();
+            }}
+          />
+          <p className="text-gray text-center mb-0">&copy; 2024 Jacky Cheng</p>
         </div>
       </div>
     </>
