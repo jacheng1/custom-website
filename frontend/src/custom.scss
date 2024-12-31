@@ -9,8 +9,20 @@ $theme-colors: (
     "custom-gray": #8892b0,
 );
 
+* {
+    font-family: "Terminal", monospace !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -18,23 +30,19 @@ $theme-colors: (
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #8892b0;
+    background: #525869;
     min-height: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ccd6f6;
-}
-
-* {
-    font-family: "Terminal", monospace !important;
+    background: #8892b0;
 }
 
 .fixed-left-sidebar {
     background-color: transparent;
     position: fixed;
     left: 0;
-    top: 30%;
+    top: 35%;
     bottom: 0;
     width: 60px;
     display: flex;
@@ -51,14 +59,20 @@ $theme-colors: (
 }
 
 .fixed-left-sidebar .fs-4:hover {
-    color: #58e8c8;
+    color: #ccd6f6;
 }
 
 .vertical-line {
-    background-color: #8892b0;
+    background-color: #525869;
     width: 1px;
     flex-grow: 1;
     margin-top: 1rem;
+}
+
+.logo {
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
 }
 
 .navbar {
@@ -75,6 +89,11 @@ $theme-colors: (
   
 .navbar.show {
     transform: translateY(0) !important;
+}
+
+.navbar-scrolled {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .container {
@@ -162,6 +181,139 @@ $theme-colors: (
 
 .text-gray {
     color: #8892b0 !important;
+}
+
+.horizontal-line {
+    height: 1px;
+    width: 30%;
+    background-color: #525869;
+    margin-left: 1rem;
+}
+
+.horizontal-line-contact {
+    height: 1px;
+    width: 15%;
+    background-color: #525869;
+    margin-left: 1rem;
+}
+
+.title {
+    padding: 1rem 0rem 1rem 0.7rem;
+    font-size: 1.3rem;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+#timeline {
+    overflow: hidden;
+}
+
+#timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 1px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #525869;
+}
+
+#timeline ul li .box {
+    position: relative;
+    bottom: 0;
+    width: 450px;
+    background-color: rgb(100 116 139 / 10%);
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 15px;
+    transform: translateX(400%);
+    transition: all 0.5s ease-in-out;
+}
+
+#timeline ul li:nth-child(even) .box {
+    left: -500px;
+    transform: translateX(-400%);
+}
+
+#timeline ul li:nth-child(odd) .box {
+    left: 50px;
+}
+
+#timeline ul li .box.show {
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+}
+
+#timeline ul li i {
+    position: absolute;
+    left: 50%;
+    top: 20;
+    width: 10px;
+    height: 10px;
+    background: #525869;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+#timeline .box:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 0;
+    right: 0;
+    border-style: solid;
+}
+
+#timeline ul li:nth-child(odd) .box:before {
+    left: -16px;
+    border-width: 8px 16px 8px 0px;
+    border-color: transparent rgb(100 116 139 / 10%);;
+}
+
+#timeline ul li:nth-child(even) .box:before {
+    right: -16px;
+    border-width: 8px 0px 8px 16px;
+    border-color: transparent rgb(100 116 139 / 10%);;
+}
+
+@media (max-width: 900px) {
+    #timeline ul li .box {
+        width: 350px;
+    }
+
+    #timeline ul li:nth-child(even) .box:before {
+        left: -16px;
+        border-width: 8px 16px 8px 0px;
+        border-color: transparent rgb(100 116 139 / 10%);;
+    }
+    
+    #timeline ul li:nth-child(odd) .box {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: -390px;
+    }
+}
+
+@media (max-width: 760px) {
+    #timeline ul li {
+        margin-left: 30px;
+    }
+    
+    #timeline ul li .box {
+        width: calc(100vw - 90px);
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: 40px;
+        border-width: 8px 16px 8px 0px;
+        border-color: transparent rgb(100 116 139 / 10%);
+    }
 }
 
 @import "bootstrap/scss/bootstrap";
