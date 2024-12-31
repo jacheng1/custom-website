@@ -52,6 +52,25 @@ function Home() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const boxes = document.querySelectorAll(".box");
+
+  window.addEventListener("scroll", DisplayContent);
+  DisplayContent();
+
+  function DisplayContent() {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+
+    boxes.forEach((box) => {
+      const topBox = box.getBoundingClientRect().top;
+
+      if (topBox < triggerBottom) {
+        box.classList.add("show");
+      } else {
+        box.classList.remove("show");
+      }
+    })
+  }
+
   return (
     <>
       <div id="hue-effect"></div>
@@ -137,15 +156,82 @@ function Home() {
       <div id="experience" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
         <div className="container p-4 d-flex align-items-center">
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">02.</span> Experience
+            <span className="intro-text">02.</span> My Experience
           </h3>
           <div className="horizontal-line"></div>
+        </div>
+        <div className="container p-4 text-center">
+          <section id="timeline">
+            <ul>
+              <li>
+                <i className=""></i>
+                <div className="box">
+                  <h3 className="fw-bold text-light-gray title">Student Consultant, Software Development
+                    <span className="intro-text"> @ Open Avenues Career Pathways</span>
+                  </h3>
+                  <p className="text-gray pb-1">Sep 2023 - Nov 2023</p>
+                  <p className="text-gray pb-3 pe-1">
+                  • Developed full-stack messenger application that allows a user to send custom SMS messages to a phone number
+                  <br />
+                  • Integrated Twilio REST API in backend, facilitating retrieval of recipient&apos;s phone number
+                  <br />
+                  • Utilized backend API endpoints, enabling create and read operations on PostgreSQL database
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i className=""></i>
+                <div className="box">
+                  <h3 className="fw-bold text-light-gray title">Labs Intern
+                    <span className="intro-text"> @ CodeDay</span>
+                  </h3>
+                  <p className="text-gray pb-1">June 2023 - Aug 2023</p>
+                  <p className="text-gray pb-3 pe-1">
+                  • Consulted with clients from Mentors in Tech, determining project scope and coordinating all visual and technical requirements of the website rebuild
+                  <br />
+                  • Utilized Agile methodologies, Gitflow, and continuous integration process to create design system via Atomic Design principles and build front-end that sources data from Contentful CMS and is distributed across a global CDN
+                  <br />
+                  • Modularized visual elements of original website into reusable components, improving end user editability
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i className=""></i>
+                <div className="box">
+                  <h3 className="fw-bold text-light-gray title">Teaching Assistant
+                    <span className="intro-text"> @ City College of San Francisco</span>
+                  </h3>
+                  <p className="text-gray pb-1">Jan. 2023 - May 2023</p>
+                  <p className="text-gray pb-3 pe-1">
+                  • Analyzed program efficiency and correctness of 20+ student&apos;s weekly C++ assignments
+                  <br />
+                  • Collaborated with instructor to provide constructive feedback with regards to program efficiency
+                  and algorithm optimization, resulting in ~93% of students passing with a C or higher
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i className=""></i>
+                <div className="box">
+                  <h3 className="fw-bold text-light-gray title">Cohort Student
+                    <span className="intro-text"> @ Mission Bit</span>
+                  </h3>
+                  <p className="text-gray pb-1">Sep. 2020 - Dec. 2020</p>
+                  <p className="text-gray pb-3 pe-1">
+                  • Worked in a team of three students to develop a COVID-19 mental health research and resources website that visualizes data and statistics by using JavaScript, HTML, and CSS
+                  <br />
+                  • Virtually presented final project to Mission Bit associates, receiving the “Most Significant Impact” award
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
       <div id="projects" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
         <div className="container p-4 d-flex align-items-center">
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">03.</span> Projects
+            <span className="intro-text">03.</span> Projects I&apos;ve Built
           </h3>
           <div className="horizontal-line"></div>
         </div>
@@ -154,7 +240,7 @@ function Home() {
         <div className="container p-4 d-flex align-items-center justify-content-center">
           <div className="horizontal-line-contact"></div>
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">04.</span> Contact
+            <span className="intro-text">04.</span> Contact Info
           </h3>
           <div className="horizontal-line-contact"></div>
         </div>
