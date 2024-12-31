@@ -161,7 +161,7 @@ function Home() {
           <div className="horizontal-line"></div>
         </div>
         <div className="container p-4 text-center">
-          <section id="timeline">
+          <section id="timeline" className="mb-5">
             <ul>
               <li>
                 <i className=""></i>
@@ -226,6 +226,7 @@ function Home() {
               </li>
             </ul>
           </section>
+          <a className="btn btn-outline-success btn-custom mt-5" href="https://drive.google.com/file/d/15n2c06tI7ZQMvMnUexmJjzAaJ_TuJ4Rq/view" target="_blank" rel="noopener noreferrer">View Full Resume</a>
         </div>
       </div>
       <div id="projects" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
