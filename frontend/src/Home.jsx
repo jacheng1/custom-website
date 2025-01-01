@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
 import logo from '/logo.svg';
 import project1 from '/project1.png';
 import project2 from '/project2.png';
@@ -270,14 +270,23 @@ function Home() {
                         enabling users to browse, sort, and search for movies.
                       </p>
                     </div>
-                    <a 
-                      className="text-decoration-none ms-3" 
-                      href="https://github.com/jacheng1/fabflix" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub className="fs-4" />
-                    </a>
+                    <div className="project-links">
+                      <a 
+                        className="text-decoration-none ms-3" 
+                        href="https://github.com/jacheng1/fabflix" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="fs-4" />
+                      </a>
+                      <Link
+                        className="text-decoration-none ms-3"
+                        to="/fabflix"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt className="fs-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -298,14 +307,23 @@ function Home() {
                         A search engine, built from the ground up, that utilizes a corpus of over 55,000 web pages and achieves results in less than 300 ms.
                       </p>
                     </div>
-                    <a 
-                      className="text-decoration-none ms-3" 
-                      href="https://github.com/jacheng1/search-engine" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub className="fs-4" />
-                    </a>
+                    <div className="project-links">
+                      <a 
+                        className="text-decoration-none ms-3" 
+                        href="https://github.com/jacheng1/search-engine" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="fs-4" />
+                      </a>
+                      <Link
+                        className="text-decoration-none ms-3"
+                        to="/zotcourse"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt className="fs-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -326,14 +344,23 @@ function Home() {
                         A full-stack inventory management application that stores user-defined items, each configurable by name and quantity.
                       </p>
                     </div>
-                    <a 
-                      className="text-decoration-none ms-3" 
-                      href="https://github.com/jacheng1/inventory-manager" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub className="fs-4" />
-                    </a>
+                    <div className="project-links">
+                      <a 
+                        className="text-decoration-none ms-3" 
+                        href="https://github.com/jacheng1/inventory-manager" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="fs-4" />
+                      </a>
+                      <Link
+                        className="text-decoration-none ms-3"
+                        to="/imanager"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt className="fs-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </li>
