@@ -53,13 +53,28 @@ body {
     z-index: 19;
 }
 
-.fixed-left-sidebar .fs-4 {
+.fixed-right-sidebar {
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    top: 70%;
+    bottom: 0;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    z-index: 19;
+}
+
+.fs-4 {
     color: #8892b0;
     transition: color 0.3s ease;
 }
 
-.fixed-left-sidebar .fs-4:hover {
-    color: #ccd6f6;
+.fs-4:hover {
+    color: #58e8c8;
 }
 
 .vertical-line {
@@ -186,14 +201,14 @@ body {
 .horizontal-line {
     height: 1px;
     width: 30%;
-    background-color: #525869;
+    background-color: rgb(100 116 139 / 30%);
     margin-left: 1rem;
 }
 
 .horizontal-line-contact {
     height: 1px;
     width: 15%;
-    background-color: #525869;
+    background-color: rgb(100 116 139 / 30%);
     margin-left: 1rem;
 }
 
@@ -314,6 +329,81 @@ body {
         border-width: 8px 16px 8px 0px;
         border-color: transparent rgb(100 116 139 / 10%);
     }
+}
+
+#projects {
+    overflow: hidden;
+}
+
+#projects ul li {
+    list-style: none;
+    position: relative;
+    width: 1px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#projects ul li .projects-box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    bottom: 0;
+    width: 450px;
+    text-align: center;
+}
+
+#projects ul li:nth-child(even) .projects-box {
+    left: 60px;
+    flex-direction: row-reverse;
+}
+
+#projects ul li:nth-child(odd) .projects-box {
+    left: -515px;
+}
+
+#projects ul li img {
+    width: 700px;
+    height: auto;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+#projects ul li .projects-box .intro-text {
+    text-align: right;
+    width: 62%;
+    margin: 0;
+}
+
+#projects ul li:nth-child(even) .projects-box .intro-text {
+    text-align: right;
+    width: 66%;
+}
+
+#projects ul li .projects-description-box {
+    position: relative;
+    bottom: 0;
+    right: 170px;
+    width: 450px;
+    background-color: #0F2341;
+    border-radius: 5px;
+    text-align: right;
+}
+
+#projects ul li:nth-child(even) .projects-description-box {
+    left: 150px;
+    text-align: left;
+}
+
+#projects ul li .project-links {
+    margin-left: 0;
+    margin-right: -30px;
+    display: inline-block;
+}
+
+#projects ul li:nth-child(even) .project-links {
+    margin-right: 100px;
 }
 
 @import "bootstrap/scss/bootstrap";

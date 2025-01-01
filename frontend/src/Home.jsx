@@ -1,8 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
 import logo from '/logo.svg';
+import project1 from '/project1.png';
+import project2 from '/project2.png';
+import project3 from '/project3.png';
 import './custom.scss';
 
 function Home() {
@@ -86,6 +89,9 @@ function Home() {
         </a>
         <div className="vertical-line"></div>
       </div>
+      <div className="fixed-right-sidebar d-flex flex-column align-items-center me-4">
+        <div className="vertical-line"></div>
+      </div>
       <nav className={`navbar navbar-light bg-custom-blue p-4 fixed-top ${scrollDirection === "down" ? "hide" : "show"} ${isScrolled ? "navbar-scrolled" : ""}`}>
         <div className="container-fluid">
           <img src={logo} className="logo" alt="Initials logo" width="50" height="50" />
@@ -148,9 +154,16 @@ function Home() {
             <br />
             intuitive, user-centric solutions.
           </p>
-          <a className="btn btn-outline-success btn-custom mt-5 mb-5" href="https://drive.google.com/file/d/15n2c06tI7ZQMvMnUexmJjzAaJ_TuJ4Rq/view" target="_blank" rel="noopener noreferrer">
+          <button 
+            className="btn btn-outline-success btn-custom mt-5 mb-5"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+              e.target.blur();
+            }}
+          >
             Check out my work!
-          </a>
+          </button>
         </div>
       </div>
       <div id="experience" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
@@ -161,7 +174,7 @@ function Home() {
           <div className="horizontal-line"></div>
         </div>
         <div className="container p-4 text-center">
-          <section id="timeline">
+          <section id="timeline" className="mb-5">
             <ul>
               <li>
                 <i className=""></i>
@@ -169,7 +182,7 @@ function Home() {
                   <h3 className="fw-bold text-light-gray title">Student Consultant, Software Development
                     <span className="intro-text"> @ Open Avenues Career Pathways</span>
                   </h3>
-                  <p className="text-gray pb-1">Sep 2023 - Nov 2023</p>
+                  <p className="text-gray pb-1">Sep. 2023 - Nov. 2023</p>
                   <p className="text-gray pb-3 pe-1">
                   • Developed full-stack messenger application that allows a user to send custom SMS messages to a phone number
                   <br />
@@ -185,7 +198,7 @@ function Home() {
                   <h3 className="fw-bold text-light-gray title">Labs Intern
                     <span className="intro-text"> @ CodeDay</span>
                   </h3>
-                  <p className="text-gray pb-1">June 2023 - Aug 2023</p>
+                  <p className="text-gray pb-1">June 2023 - Aug. 2023</p>
                   <p className="text-gray pb-3 pe-1">
                   • Consulted with clients from Mentors in Tech, determining project scope and coordinating all visual and technical requirements of the website rebuild
                   <br />
@@ -226,6 +239,7 @@ function Home() {
               </li>
             </ul>
           </section>
+          <a className="btn btn-outline-success btn-custom mt-5" href="https://drive.google.com/file/d/15n2c06tI7ZQMvMnUexmJjzAaJ_TuJ4Rq/view" target="_blank" rel="noopener noreferrer">View Full Resume</a>
         </div>
       </div>
       <div id="projects" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
@@ -234,6 +248,124 @@ function Home() {
             <span className="intro-text">03.</span> Projects I&apos;ve Built
           </h3>
           <div className="horizontal-line"></div>
+        </div>
+        <div className="container p-4 text-center">
+          <section id="projects">
+            <ul>
+              <li>
+                <div className="projects-box d-flex align-items-start">
+                  <img 
+                    src={project1}
+                    className="project-img me-4"
+                    alt="Project 1"
+                  />
+                  <div>
+                    <div className="d-flex align-items-center justify-content-between">
+                      <p className="intro-text pb-0">Featured Project</p>
+                    </div>
+                    <h3 className="fw-bold text-light-gray mt-1 pb-3">Fabflix</h3>
+                    <div className="projects-description-box">
+                      <p className="text-gray p-4">
+                        A full-stack e-commerce application built and deployed on AWS EC2, 
+                        enabling users to browse, sort, and search for movies.
+                      </p>
+                    </div>
+                    <div className="project-links">
+                      <a 
+                        className="text-decoration-none ms-3" 
+                        href="https://github.com/jacheng1/fabflix" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="fs-4" />
+                      </a>
+                      <Link
+                        className="text-decoration-none ms-3"
+                        to="/fabflix"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt className="fs-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="projects-box d-flex align-items-start">
+                  <img 
+                    src={project2}
+                    className="project-img me-4" 
+                    alt="Project 2"
+                  />
+                  <div>
+                    <div className="d-flex align-items-center justify-content-between">
+                      <p className="intro-text pb-0">Featured Project</p>
+                    </div>
+                    <h3 className="fw-bold text-light-gray mt-1 pb-3">Zotsearch</h3>
+                    <div className="projects-description-box">
+                      <p className="text-gray p-4">
+                        A search engine, built from the ground up, that utilizes a corpus of over 55,000 web pages and achieves results in less than 300 ms.
+                      </p>
+                    </div>
+                    <div className="project-links">
+                      <a 
+                        className="text-decoration-none ms-3" 
+                        href="https://github.com/jacheng1/search-engine" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="fs-4" />
+                      </a>
+                      <Link
+                        className="text-decoration-none ms-3"
+                        to="/zotcourse"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt className="fs-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="projects-box d-flex align-items-start">
+                  <img 
+                    src={project3}
+                    className="project-img me-4" 
+                    alt="Project 3"
+                  />
+                  <div>
+                    <div className="d-flex align-items-center justify-content-between">
+                      <p className="intro-text pb-0">Featured Project</p>
+                    </div>
+                    <h3 className="fw-bold text-light-gray mt-1 pb-3">iManager</h3>
+                    <div className="projects-description-box">
+                      <p className="text-gray p-4">
+                        A full-stack inventory management application that stores user-defined items, each configurable by name and quantity.
+                      </p>
+                    </div>
+                    <div className="project-links">
+                      <a 
+                        className="text-decoration-none ms-3" 
+                        href="https://github.com/jacheng1/inventory-manager" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="fs-4" />
+                      </a>
+                      <Link
+                        className="text-decoration-none ms-3"
+                        to="/imanager"
+                        rel="noopener noreferrer"
+                      >
+                        <FaExternalLinkAlt className="fs-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
       <div id="contact" className="intro-section bg-custom-blue text-start text-light pt-5 pb-5">
