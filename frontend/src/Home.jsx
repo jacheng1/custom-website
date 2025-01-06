@@ -318,7 +318,7 @@ function Home() {
                       </a>
                       <Link
                         className="text-decoration-none ms-3"
-                        to="/zotcourse"
+                        to="/zotsearch"
                         rel="noopener noreferrer"
                       >
                         <FaExternalLinkAlt className="fs-4" />
