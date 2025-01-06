@@ -55,17 +55,23 @@ function Home() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Handle experience section timeline
   const boxes = document.querySelectorAll(".box");
 
+  // Activate timeline animation upon user scroll
   window.addEventListener("scroll", DisplayContent);
   DisplayContent();
 
+  // Helper function to handle timeline animations
   function DisplayContent() {
+    // Set animation trigger for window
     const triggerBottom = (window.innerHeight / 5) * 4;
 
     boxes.forEach((box) => {
+      // Retrieve box position relative to viewport
       const topBox = box.getBoundingClientRect().top;
 
+      // If topBox < triggerBottom position, add box to timeline via slide-in animation. If not, remove box from timeline via slide-out animation
       if (topBox < triggerBottom) {
         box.classList.add("show");
       } else {

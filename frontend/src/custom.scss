@@ -282,53 +282,13 @@ body {
 #timeline ul li:nth-child(odd) .box:before {
     left: -16px;
     border-width: 8px 16px 8px 0px;
-    border-color: transparent rgb(100 116 139 / 10%);;
+    border-color: transparent rgb(100 116 139 / 10%);
 }
 
 #timeline ul li:nth-child(even) .box:before {
     right: -16px;
     border-width: 8px 0px 8px 16px;
-    border-color: transparent rgb(100 116 139 / 10%);;
-}
-
-@media (max-width: 900px) {
-    #timeline ul li .box {
-        width: 350px;
-    }
-
-    #timeline ul li:nth-child(even) .box:before {
-        left: -16px;
-        border-width: 8px 16px 8px 0px;
-        border-color: transparent rgb(100 116 139 / 10%);;
-    }
-    
-    #timeline ul li:nth-child(odd) .box {
-        left: 40px;
-    }
-
-    #timeline ul li:nth-child(even) .box {
-        left: -390px;
-    }
-}
-
-@media (max-width: 760px) {
-    #timeline ul li {
-        margin-left: 30px;
-    }
-    
-    #timeline ul li .box {
-        width: calc(100vw - 90px);
-    }
-
-    #timeline ul li:nth-child(even) .box {
-        left: 40px;
-    }
-
-    #timeline ul li:nth-child(even) .box {
-        left: 40px;
-        border-width: 8px 16px 8px 0px;
-        border-color: transparent rgb(100 116 139 / 10%);
-    }
+    border-color: transparent rgb(100 116 139 / 10%);
 }
 
 #projects {
@@ -374,6 +334,7 @@ body {
     text-align: right;
     width: 62%;
     margin: 0;
+    z-index: 30;
 }
 
 #projects ul li:nth-child(even) .projects-box .intro-text {
@@ -400,10 +361,115 @@ body {
     margin-left: 0;
     margin-right: -30px;
     display: inline-block;
+    z-index: 100;
 }
 
 #projects ul li:nth-child(even) .project-links {
-    margin-right: 100px;
+    margin-right: -500px;
+    z-index: 100;
+}
+
+@media (max-width: 900px) {
+    #timeline ul li .box {
+        width: 350px;
+    }
+
+    #timeline ul li:nth-child(even) .box:before {
+        left: -16px;
+        border-width: 8px 16px 8px 0px;
+        border-color: transparent rgb(100 116 139 / 10%);
+    }
+    
+    #timeline ul li:nth-child(odd) .box {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: -390px;
+    }
+}
+
+@media (max-width: 760px) {
+    .vertical-line {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .navbar .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .navbar .btn {
+        width: auto;
+    }
+
+    .fs-4 {
+        display: none;
+    }
+
+    .intro-text {
+        padding-top: 180px;
+    }
+
+    .horizontal-line {
+        display: none;
+    }
+    
+    .horizontal-line-contact {
+        display: none;
+    }
+
+    #timeline ul li {
+        margin-left: 30px;
+        height: 750px;
+    }
+    
+    #timeline ul li .box {
+        width: calc(100vw - 90px);
+        padding-right: 60px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: 40px;
+        border-width: 8px 16px 8px 0px;
+        border-color: transparent rgb(100 116 139 / 10%);
+    }
+
+    #projects ul li img {
+        width: 700px;
+        height: auto;
+    }
+
+    #projects ul li .projects-box .intro-text {
+        text-align: center;
+        width: 80%;
+    }
+
+    #projects ul li .projects-description-box {
+        bottom: 100px;
+        right: 450px;
+        padding: 35px;
+        background-color: rgb(15 35 65 / 95%);
+        text-align: center;
+    }
+
+    #projects ul li:nth-child(even) .projects-description-box {
+        left: 420px;
+        text-align: center;
+    }
 }
 
 @import "bootstrap/scss/bootstrap";
