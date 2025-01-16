@@ -60,6 +60,18 @@ function Home() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Helper function to handle scroll into view upon click
+  const handleScrollIntoView = (e, id) => {
+    // Prevents button from skipping scroll into view animation
+    e.preventDefault();
+
+    // Scroll to page section by id
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+
+    // Remove button text highlight after click
+    e.target.blur();
+  };
+
   // Handle experience section timeline
   const boxes = document.querySelectorAll(".box");
 
@@ -86,7 +98,7 @@ function Home() {
   }
 
   return (
-    <>
+    <body className="bg-custom-blue">
       <div id="hue-effect"></div>
       <div className="fixed-left-sidebar d-flex flex-column align-items-center ms-4">
         <a
@@ -132,11 +144,7 @@ function Home() {
           <form className="d-flex ms-auto align-items-center">
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("about")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "about");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -144,11 +152,7 @@ function Home() {
             </button>
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("experience")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "experience");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -156,11 +160,7 @@ function Home() {
             </button>
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("projects")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "projects");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -168,11 +168,7 @@ function Home() {
             </button>
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("contact")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "contact");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -191,9 +187,9 @@ function Home() {
       </nav>
       <div
         id="about"
-        className="intro-section bg-custom-blue text-start text-light pt-5 pb-5 mt-5"
+        className="intro-section bg-custom-blue text-start text-light p-5 mt-5"
       >
-        <div className="container p-4">
+        <div className="container p-5">
           <p className="intro-text">Hi, my name is</p>
           <h1 className="display-4 fw-bold text-light-gray">Jacky Cheng.</h1>
           <h1 className="display-4 fw-bold text-gray">
@@ -209,11 +205,7 @@ function Home() {
           <button
             className="btn btn-outline-success btn-custom mt-5 mb-5"
             onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("projects")
-                .scrollIntoView({ behavior: "smooth" });
-              e.target.blur();
+              handleScrollIntoView(e, "projects");
             }}
           >
             Check out my work!
@@ -504,17 +496,13 @@ function Home() {
             width="50"
             height="50"
             onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("about")
-                .scrollIntoView({ behavior: "smooth" });
-              e.target.blur();
+              handleScrollIntoView(e, "about");
             }}
           />
           <p className="text-gray text-center mb-0">&copy; 2024 Jacky Cheng</p>
         </div>
       </div>
-    </>
+    </body>
   );
 }
 

@@ -53,8 +53,20 @@ function Project3() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Helper function to handle scroll into view upon click
+  const handleScrollIntoView = (e, id) => {
+    // Prevents button from skipping scroll into view animation
+    e.preventDefault();
+
+    // Scroll to page section by id
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+
+    // Remove button text highlight after click
+    e.target.blur();
+  };
+
   return (
-    <>
+    <body className="bg-custom-blue">
       <div id="hue-effect"></div>
       <div className="fixed-left-sidebar d-flex flex-column align-items-center ms-4">
         <a
@@ -158,17 +170,13 @@ function Project3() {
             width="50"
             height="50"
             onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("project")
-                .scrollIntoView({ behavior: "smooth" });
-              e.target.blur();
+              handleScrollIntoView(e, "project");
             }}
           />
           <p className="text-gray text-center mb-0">&copy; 2024 Jacky Cheng</p>
         </div>
       </div>
-    </>
+    </body>
   );
 }
 
