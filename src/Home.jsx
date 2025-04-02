@@ -1,11 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaExternalLinkAlt,
 } from "react-icons/fa";
 import logo from "/logo.svg";
 import project1 from "/project1.png";
@@ -60,6 +58,18 @@ function Home() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Helper function to handle scroll into view upon click
+  const handleScrollIntoView = (e, id) => {
+    // Prevents button from skipping scroll into view animation
+    e.preventDefault();
+
+    // Scroll to page section by id
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+
+    // Remove button text highlight after click
+    e.target.blur();
+  };
+
   // Handle experience section timeline
   const boxes = document.querySelectorAll(".box");
 
@@ -86,7 +96,7 @@ function Home() {
   }
 
   return (
-    <>
+    <body className="bg-custom-blue">
       <div id="hue-effect"></div>
       <div className="fixed-left-sidebar d-flex flex-column align-items-center ms-4">
         <a
@@ -132,11 +142,7 @@ function Home() {
           <form className="d-flex ms-auto align-items-center">
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("about")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "about");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -144,11 +150,7 @@ function Home() {
             </button>
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("experience")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "experience");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -156,11 +158,7 @@ function Home() {
             </button>
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("projects")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "projects");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -168,11 +166,7 @@ function Home() {
             </button>
             <button
               onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("contact")
-                  .scrollIntoView({ behavior: "smooth" });
-                e.target.blur();
+                handleScrollIntoView(e, "contact");
               }}
               className="btn btn-outline-light ms-3"
             >
@@ -191,15 +185,15 @@ function Home() {
       </nav>
       <div
         id="about"
-        className="intro-section bg-custom-blue text-start text-light pt-5 pb-5 mt-5"
+        className="intro-section bg-custom-blue text-start text-light p-5 mt-5"
       >
-        <div className="container p-4">
+        <div className="container p-7 py-7">
           <p className="intro-text">Hi, my name is</p>
-          <h1 className="display-4 fw-bold text-light-gray">Jacky Cheng.</h1>
-          <h1 className="display-4 fw-bold text-gray">
-            I build full-stack applications.
+          <h1 className="display-4 fw-bold text-light-gray name-text">Jacky Cheng.</h1>
+          <h1 className="display-4 fw-bold text-gray statement-text">
+            I build web applications.
           </h1>
-          <p className="text-gray">
+          <p className="text-gray py-3 description-text">
             I am a computer science student at the University of
             <br />
             California, Irvine looking to design and implement
@@ -209,11 +203,7 @@ function Home() {
           <button
             className="btn btn-outline-success btn-custom mt-5 mb-5"
             onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("projects")
-                .scrollIntoView({ behavior: "smooth" });
-              e.target.blur();
+              handleScrollIntoView(e, "projects");
             }}
           >
             Check out my work!
@@ -226,7 +216,7 @@ function Home() {
       >
         <div className="container p-4 d-flex align-items-center">
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">02.</span> My Experience
+            <span className="intro-text fw-light">02.</span> My Experience
           </h3>
           <div className="horizontal-line"></div>
         </div>
@@ -243,7 +233,7 @@ function Home() {
                       @ Open Avenues Career Pathways
                     </span>
                   </h3>
-                  <p className="text-gray pb-1">Sep. 2023 - Nov. 2023</p>
+                  <p className="text-gray pb-1">Sept. 2023 - Nov. 2023</p>
                   <p className="text-gray pb-3 pe-1">
                     • Developed full-stack messenger application that allows a
                     user to send custom SMS messages to a phone number
@@ -305,7 +295,7 @@ function Home() {
                     Cohort Student
                     <span className="intro-text"> @ Mission Bit</span>
                   </h3>
-                  <p className="text-gray pb-1">Sep. 2020 - Dec. 2020</p>
+                  <p className="text-gray pb-1">Sept. 2020 - Dec. 2020</p>
                   <p className="text-gray pb-3 pe-1">
                     • Worked in a team of three students to develop a COVID-19
                     mental health research and resources website that visualizes
@@ -333,7 +323,7 @@ function Home() {
       >
         <div className="container p-4 d-flex align-items-center">
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">03.</span> Projects I&apos;ve Built
+            <span className="intro-text fw-light">03.</span> Projects I&apos;ve Built
           </h3>
           <div className="horizontal-line"></div>
         </div>
@@ -370,13 +360,6 @@ function Home() {
                       >
                         <FaGithub className="fs-4" />
                       </a>
-                      <Link
-                        className="text-decoration-none ms-3"
-                        to="/fabflix"
-                        rel="noopener noreferrer"
-                      >
-                        <FaExternalLinkAlt className="fs-4" />
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -411,13 +394,6 @@ function Home() {
                       >
                         <FaGithub className="fs-4" />
                       </a>
-                      <Link
-                        className="text-decoration-none ms-3"
-                        to="/zotsearch"
-                        rel="noopener noreferrer"
-                      >
-                        <FaExternalLinkAlt className="fs-4" />
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -452,13 +428,6 @@ function Home() {
                       >
                         <FaGithub className="fs-4" />
                       </a>
-                      <Link
-                        className="text-decoration-none ms-3"
-                        to="/imanager"
-                        rel="noopener noreferrer"
-                      >
-                        <FaExternalLinkAlt className="fs-4" />
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -474,7 +443,7 @@ function Home() {
         <div className="container p-4 d-flex align-items-center justify-content-center">
           <div className="horizontal-line-contact"></div>
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">04.</span> Contact Info
+            <span className="intro-text fw-light">04.</span> Contact Info
           </h3>
           <div className="horizontal-line-contact"></div>
         </div>
@@ -504,17 +473,13 @@ function Home() {
             width="50"
             height="50"
             onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("about")
-                .scrollIntoView({ behavior: "smooth" });
-              e.target.blur();
+              handleScrollIntoView(e, "about");
             }}
           />
           <p className="text-gray text-center mb-0">&copy; 2024 Jacky Cheng</p>
         </div>
       </div>
-    </>
+    </body>
   );
 }
 
