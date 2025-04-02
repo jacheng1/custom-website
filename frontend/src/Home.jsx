@@ -1,11 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaExternalLinkAlt,
 } from "react-icons/fa";
 import logo from "/logo.svg";
 import project1 from "/project1.png";
