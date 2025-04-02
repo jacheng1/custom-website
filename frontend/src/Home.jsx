@@ -235,7 +235,7 @@ function Home() {
                       @ Open Avenues Career Pathways
                     </span>
                   </h3>
-                  <p className="text-gray pb-1">Sep. 2023 - Nov. 2023</p>
+                  <p className="text-gray pb-1">Sept. 2023 - Nov. 2023</p>
                   <p className="text-gray pb-3 pe-1">
                     • Developed full-stack messenger application that allows a
                     user to send custom SMS messages to a phone number
@@ -297,7 +297,7 @@ function Home() {
                     Cohort Student
                     <span className="intro-text"> @ Mission Bit</span>
                   </h3>
-                  <p className="text-gray pb-1">Sep. 2020 - Dec. 2020</p>
+                  <p className="text-gray pb-1">Sept. 2020 - Dec. 2020</p>
                   <p className="text-gray pb-3 pe-1">
                     • Worked in a team of three students to develop a COVID-19
                     mental health research and resources website that visualizes
@@ -362,13 +362,6 @@ function Home() {
                       >
                         <FaGithub className="fs-4" />
                       </a>
-                      <Link
-                        className="text-decoration-none ms-3"
-                        to="/fabflix"
-                        rel="noopener noreferrer"
-                      >
-                        <FaExternalLinkAlt className="fs-4" />
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -403,13 +396,6 @@ function Home() {
                       >
                         <FaGithub className="fs-4" />
                       </a>
-                      <Link
-                        className="text-decoration-none ms-3"
-                        to="/zotsearch"
-                        rel="noopener noreferrer"
-                      >
-                        <FaExternalLinkAlt className="fs-4" />
-                      </Link>
                     </div>
                   </div>
                 </div>
@@ -444,13 +430,6 @@ function Home() {
                       >
                         <FaGithub className="fs-4" />
                       </a>
-                      <Link
-                        className="text-decoration-none ms-3"
-                        to="/imanager"
-                        rel="noopener noreferrer"
-                      >
-                        <FaExternalLinkAlt className="fs-4" />
-                      </Link>
                     </div>
                   </div>
                 </div>
