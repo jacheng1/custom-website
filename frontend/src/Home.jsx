@@ -189,7 +189,7 @@ function Home() {
         id="about"
         className="intro-section bg-custom-blue text-start text-light p-5 mt-5"
       >
-        <div className="container p-5">
+        <div className="container p-7 py-7">
           <p className="intro-text">Hi, my name is</p>
           <h1 className="display-4 fw-bold text-light-gray">Jacky Cheng.</h1>
           <h1 className="display-4 fw-bold text-gray">
