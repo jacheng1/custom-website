@@ -390,6 +390,26 @@ body {
 }
 
 @media (max-width: 900px) {
+  .p-7 {
+    padding: 0rem !important;
+  }
+
+  .py-7 {
+    padding-top: 0rem !important;
+  }
+
+  #about .intro-text {
+    font-size: 12px;
+  }
+  
+  #about .name-text, .statement-text {
+    font-size: 40px !important;
+  }
+  
+  #about .description-text {
+    font-size: 12px !important;
+  }
+
   #timeline ul li .box {
     width: 350px;
   }
@@ -410,6 +430,26 @@ body {
 }
 
 @media (max-width: 760px) {
+  .p-7 {
+    padding: 0rem !important;
+  }
+
+  .py-7 {
+    padding-top: 0rem !important;
+  }
+
+  #about .intro-text {
+    font-size: 16px;
+  }
+  
+  #about .name-text, .statement-text {
+    font-size: 40px !important;
+  }
+  
+  #about .description-text {
+    font-size: 16px !important;
+  }
+
   .vertical-line {
     display: none;
   }
