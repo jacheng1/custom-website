@@ -218,7 +218,7 @@ function Home() {
       >
         <div className="container p-4 d-flex align-items-center">
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">02.</span> My Experience
+            <span className="intro-text fw-light">02.</span> My Experience
           </h3>
           <div className="horizontal-line"></div>
         </div>
@@ -325,7 +325,7 @@ function Home() {
       >
         <div className="container p-4 d-flex align-items-center">
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">03.</span> Projects I&apos;ve Built
+            <span className="intro-text fw-light">03.</span> Projects I&apos;ve Built
           </h3>
           <div className="horizontal-line"></div>
         </div>
@@ -466,7 +466,7 @@ function Home() {
         <div className="container p-4 d-flex align-items-center justify-content-center">
           <div className="horizontal-line-contact"></div>
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text">04.</span> Contact Info
+            <span className="intro-text fw-light">04.</span> Contact Info
           </h3>
           <div className="horizontal-line-contact"></div>
         </div>
