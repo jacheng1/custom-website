@@ -191,11 +191,11 @@ function Home() {
       >
         <div className="container p-7 py-7">
           <p className="intro-text">Hi, my name is</p>
-          <h1 className="display-4 fw-bold text-light-gray">Jacky Cheng.</h1>
-          <h1 className="display-4 fw-bold text-gray">
-            I build full-stack applications.
+          <h1 className="display-4 fw-bold text-light-gray name-text">Jacky Cheng.</h1>
+          <h1 className="display-4 fw-bold text-gray statement-text">
+            I build web applications.
           </h1>
-          <p className="text-gray">
+          <p className="text-gray py-3 description-text">
             I am a computer science student at the University of
             <br />
             California, Irvine looking to design and implement
