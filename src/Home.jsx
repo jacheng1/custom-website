@@ -174,7 +174,7 @@ function Home() {
             </button>
             <a
               className="btn btn-outline-success ms-3"
-              href="https://drive.google.com/file/d/15n2c06tI7ZQMvMnUexmJjzAaJ_TuJ4Rq/view"
+              href="https://drive.google.com/file/d/1fDcmdL9INIUQnNjktLOo8W2f1Lxj2dlb/view"
               target="_blank"
               rel="noopener noreferrer"
             >
