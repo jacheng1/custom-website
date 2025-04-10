@@ -129,6 +129,10 @@ body {
   padding-top: 9rem !important;
 }
 
+#about .btn-outline-success {
+  margin-top: 25px !important;
+}
+
 #hue-effect {
   position: absolute;
   width: 1px;
@@ -395,7 +399,11 @@ body {
   }
 
   .py-7 {
-    padding-top: 5rem !important;
+    padding-top: 3rem !important;
+  }
+
+  #about .btn-outline-success {
+    margin-top: 5px !important;
   }
 }
 
