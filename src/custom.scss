@@ -348,10 +348,13 @@ body {
 }
 
 #projects ul li img {
+  position: relative;
   width: 700px;
   height: auto;
   border-radius: 5px;
   flex-shrink: 0;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 #projects ul li .projects-box .intro-text {
@@ -371,9 +374,12 @@ body {
   bottom: 0;
   right: 170px;
   width: 450px;
-  background-color: #0f2341;
-  border-radius: 5px;
   text-align: right;
+  background-color: #0f2341;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 2;
 }
 
 #projects ul li:nth-child(even) .projects-description-box {
@@ -529,21 +535,19 @@ body {
   #projects ul li img {
     width: 700px;
     height: auto;
+    position: relative;
+    z-index: 1;
   }
-
-  #projects ul li .projects-box .intro-text {
-    text-align: center;
-    width: 80%;
-  }
-
   #projects ul li .projects-description-box {
     bottom: 100px;
     right: 450px;
     padding: 35px;
     background-color: rgb(15 35 65 / 95%);
     text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
   }
-
   #projects ul li:nth-child(even) .projects-description-box {
     left: 420px;
     text-align: center;
