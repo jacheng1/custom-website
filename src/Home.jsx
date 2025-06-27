@@ -194,11 +194,9 @@ function Home() {
             I build web applications.
           </h1>
           <p className="text-gray py-3 description-text">
-            I am a computer science student at the University of
+            I'm a computer science student at the University of California, Irvine
             <br />
-            California, Irvine looking to design and implement
-            <br />
-            intuitive, user-centric solutions.
+            looking to design and implement intuitive, user-centric solutions.
           </p>
           <button
             className="btn btn-outline-success btn-custom mt-5 mb-5"
