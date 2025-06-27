@@ -1,14 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import React, { useState, useEffect } from "react";
+
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
 } from "react-icons/fa";
+import { IoMdArrowDropright } from "react-icons/io";
+
 import logo from "/logo.svg";
 import project1 from "/project1.png";
 import project2 from "/project2.png";
 import project3 from "/project3.png";
+
 import "./custom.scss";
 
 function Home() {
@@ -224,43 +229,98 @@ function Home() {
               <li>
                 <i className=""></i>
                 <div className="box">
-                  <h3 className="fw-bold text-light-gray title">
-                    Student Consultant, Software Development
+                  <h3 className="fw-bold text-light-gray timeline-title">
+                    Information Technology Intern
                     <span className="intro-text">
                       {" "}
-                      @ Open Avenues Career Pathways
+                      @ Southern California Edison
                     </span>
                   </h3>
-                  <p className="text-gray pb-1">Sept. 2023 - Nov. 2023</p>
-                  <p className="text-gray pb-3 pe-1">
-                    • Developed full-stack messenger application that allows a
-                    user to send custom SMS messages to a phone number
-                    <br />
-                    • Integrated Twilio REST API in backend, facilitating
-                    retrieval of recipient&apos;s phone number
-                    <br />• Utilized backend API endpoints, enabling create and
-                    read operations on PostgreSQL database
+                  <p className="text-light-gray pb-1 timeline-dates">June 2025 - Present</p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Digital Grid Services, Outage Management Support
                   </p>
                 </div>
               </li>
               <li>
                 <i className=""></i>
                 <div className="box">
-                  <h3 className="fw-bold text-light-gray title">
-                    Labs Intern
+                  <h3 className="fw-bold text-light-gray timeline-title">
+                    Software Developer
+                    <span className="intro-text">
+                      {" "}
+                      @ Ready Tutor
+                    </span>
+                  </h3>
+                  <p className="text-light-gray pb-1 timeline-dates">Jan. 2025 - Present</p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Leading front-end development of Course Eater, a year-by-year course planning tool for 100+ UCI students
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Coordinating design of Figma prototype and implementation of user interface, improving the overall user experience
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Collaborating with back-end developers to ensure seamless connectivity between front-end and back-end functionality
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Migrated app from legacy PeterPortal API to Anteater API by refactoring API calls, ensuring maintainability
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i className=""></i>
+                <div className="box">
+                  <h3 className="fw-bold text-light-gray timeline-title">
+                    Student Consultant, Software Development
+                    <span className="intro-text">
+                      {" "}
+                      @ Open Avenues Career Pathways
+                    </span>
+                  </h3>
+                  <p className="text-light-gray pb-1 timeline-dates">Sept. 2023 - Nov. 2023</p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Developed full-stack messenger application that allows a user to send custom SMS messages to a phone number
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Integrated Twilio REST API in backend, facilitating retrieval of recipient&apos;s phone number
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Utilized backend API endpoints, enabling create and read operations on PostgreSQL database
+                  </p>
+                </div>
+              </li>
+              <li>
+                <i className=""></i>
+                <div className="box">
+                  <h3 className="fw-bold text-light-gray timeline-title">
+                    Open-Source Software Engineering Intern
                     <span className="intro-text"> @ CodeDay</span>
                   </h3>
-                  <p className="text-gray pb-1">June 2023 - Aug. 2023</p>
-                  <p className="text-gray pb-3 pe-1">
-                    • Consulted with clients from Mentors in Tech, determining
+                  <p className="text-light-gray pb-1 timeline-dates">June 2023 - Aug. 2023</p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Consulted with clients from Mentors in Tech, determining
                     project scope and coordinating all visual and technical
                     requirements of the website rebuild
-                    <br />
-                    • Utilized Agile methodologies, Gitflow, and continuous
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Utilized Agile methodologies, Gitflow, and continuous
                     integration process to create design system via Atomic
                     Design principles and build front-end that sources data from
                     Contentful CMS and is distributed across a global CDN
-                    <br />• Modularized visual elements of original website into
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Modularized visual elements of original website into
                     reusable components, improving end user editability
                   </p>
                 </div>
@@ -268,38 +328,24 @@ function Home() {
               <li>
                 <i className=""></i>
                 <div className="box">
-                  <h3 className="fw-bold text-light-gray title">
+                  <h3 className="fw-bold text-light-gray timeline-title">
                     Teaching Assistant
                     <span className="intro-text">
                       {" "}
                       @ City College of San Francisco
                     </span>
                   </h3>
-                  <p className="text-gray pb-1">Jan. 2023 - May 2023</p>
-                  <p className="text-gray pb-3 pe-1">
-                    • Analyzed program efficiency and correctness of 20+
-                    student&apos;s weekly C++ assignments
-                    <br />• Collaborated with instructor to provide constructive
+                  <p className="text-light-gray pb-1 timeline-dates">Jan. 2023 - May 2023</p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Analyzed program efficiency and correctness of 20+ student&apos;s weekly C++ assignments
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Collaborated with instructor to provide constructive
                     feedback with regards to program efficiency and algorithm
                     optimization, resulting in ~93% of students passing with a C
                     or higher
-                  </p>
-                </div>
-              </li>
-              <li>
-                <i className=""></i>
-                <div className="box">
-                  <h3 className="fw-bold text-light-gray title">
-                    Cohort Student
-                    <span className="intro-text"> @ Mission Bit</span>
-                  </h3>
-                  <p className="text-gray pb-1">Sept. 2020 - Dec. 2020</p>
-                  <p className="text-gray pb-3 pe-1">
-                    • Worked in a team of three students to develop a COVID-19
-                    mental health research and resources website that visualizes
-                    data and statistics by using JavaScript, HTML, and CSS
-                    <br />• Virtually presented final project to Mission Bit
-                    associates, receiving the “Most Significant Impact” award
                   </p>
                 </div>
               </li>
