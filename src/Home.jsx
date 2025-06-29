@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import {
   FaGithub,
@@ -47,7 +47,7 @@ function Home() {
   }, []);
 
   // useEffect for hue that moves with mouse cursor
-  React.useEffect(() => {
+  useEffect(() => {
     // Reference .scss element #hue-effect
     const hue = document.getElementById("hue-effect");
 
@@ -199,9 +199,9 @@ function Home() {
             I build web applications.
           </h1>
           <p className="text-gray py-3 description-text">
-            I'm a computer science student at the University of California, Irvine
+            I'm a computer science student at the <span className="description-text-name">University of California, Irvine</span>
             <br />
-            looking to design and implement intuitive, user-centric solutions.
+            looking to design and implement intuitive, user-centric web solutions.
           </p>
           <button
             className="btn btn-outline-success btn-custom mt-5 mb-5"
