@@ -228,7 +228,7 @@ body {
 }
 
 .text-gray {
-  color: #8892b0 !important;
+  color: #97a2c2 !important;
 }
 
 .horizontal-line {
@@ -378,6 +378,26 @@ body {
   left: -515px;
 }
 
+#projects ul li:nth-child(odd) .projects-box .intro-text,
+#projects ul li:nth-child(odd) .projects-box h3 {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  text-align: right;
+  align-items: flex-end;
+  z-index: 101 !important;
+}
+
+#projects ul li:nth-child(even) .projects-box .intro-text,
+#projects ul li:nth-child(even) .projects-box h3 {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  text-align: left;
+  align-items: flex-start;
+  z-index: 101 !important;
+}
+
 #projects ul li img {
   position: relative;
   width: 700px;
@@ -393,6 +413,26 @@ body {
   width: 62%;
   margin: 0;
   z-index: 30;
+}
+
+#projects ul li .projects-box h3 {
+  margin-left: 155px !important;
+  margin-right: 0 !important;
+  width: 100%;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: center;
+  display: flex;
+}
+
+#projects ul li:nth-child(odd) .projects-box h3 {
+  margin-left: -60px !important;
+  margin-right: 0 !important;
+  width: 100%;
+  text-align: right !important;
+  justify-content: flex-start !important;
+  align-items: center;
+  display: flex;
 }
 
 #projects ul li:nth-child(even) .projects-box .intro-text {
@@ -418,15 +458,20 @@ body {
   text-align: left;
 }
 
+#projects ul li .projects-description-text {
+  font-family: "SF Pro Text", sans-serif !important;
+}
+
 #projects ul li .project-links {
   margin-left: 0;
-  margin-right: -30px;
+  margin-right: -60px;
+  margin-top: 10px;
   display: inline-block;
   z-index: 100;
 }
 
 #projects ul li:nth-child(even) .project-links {
-  margin-right: 100px;
+  margin-right: 130px;
   z-index: 100;
 }
 

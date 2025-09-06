@@ -13,6 +13,7 @@ import logo from "/logo.svg";
 import project1 from "/project1.png";
 import project2 from "/project2.png";
 import project3 from "/project3.png";
+import project4 from "/project4.png";
 
 import "./custom.scss";
 
@@ -377,9 +378,42 @@ function Home() {
               <li>
                 <div className="projects-box d-flex align-items-start">
                   <img
-                    src={project1}
+                    src={project4}
                     className="project-img me-4"
                     alt="Project 1"
+                  />
+                  <div>
+                    <div className="d-flex align-items-center justify-content-between">
+                      <p className="intro-text pb-0">Featured Project</p>
+                    </div>
+                    <h3 className="fw-bold text-light-gray mt-1 pb-3">
+                      Senior Sense Solutions
+                    </h3>
+                    <div className="projects-description-box">
+                      <p className="text-gray p-4 projects-description-text">
+                        A full-stack IoT application built and deployed on AWS EC2, enabling real-time biometric monitoring, fall detection, and wearable device location tracking.
+                        The user can manage patients, monitor their vitals, and view time-based health data trends.
+                      </p>
+                    </div>
+                    <div className="project-links">
+                      <a
+                        className="text-decoration-none ms-3"
+                        href="https://github.com/PurelyBlank/Senior-Sense-Solutions"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="fs-4" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className="projects-box d-flex align-items-start">
+                  <img
+                    src={project1}
+                    className="project-img me-4"
+                    alt="Project 2"
                   />
                   <div>
                     <div className="d-flex align-items-center justify-content-between">
@@ -389,7 +423,7 @@ function Home() {
                       Fabflix
                     </h3>
                     <div className="projects-description-box">
-                      <p className="text-gray p-4">
+                      <p className="text-gray p-4 projects-description-text">
                         A full-stack e-commerce application built and deployed
                         on AWS EC2, enabling users to browse, sort, and search
                         for movies.
@@ -413,17 +447,17 @@ function Home() {
                   <img
                     src={project2}
                     className="project-img me-4"
-                    alt="Project 2"
+                    alt="Project 3"
                   />
                   <div>
                     <div className="d-flex align-items-center justify-content-between">
                       <p className="intro-text pb-0">Featured Project</p>
                     </div>
                     <h3 className="fw-bold text-light-gray mt-1 pb-3">
-                      Zotsearch
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zotsearch
                     </h3>
                     <div className="projects-description-box">
-                      <p className="text-gray p-4">
+                      <p className="text-gray p-4 projects-description-text">
                         A search engine, built from the ground up, that utilizes
                         a corpus of over 55,000 web pages and achieves results
                         in less than 300 ms.
@@ -447,7 +481,7 @@ function Home() {
                   <img
                     src={project3}
                     className="project-img me-4"
-                    alt="Project 3"
+                    alt="Project 4"
                   />
                   <div>
                     <div className="d-flex align-items-center justify-content-between">
@@ -457,7 +491,7 @@ function Home() {
                       iManager
                     </h3>
                     <div className="projects-description-box">
-                      <p className="text-gray p-4">
+                      <p className="text-gray p-4 projects-description-text">
                         A full-stack inventory management application that
                         stores user-defined items, each configurable by name and
                         quantity.
