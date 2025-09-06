@@ -234,13 +234,25 @@ function Home() {
                     Information Technology Intern
                     <span className="intro-text">
                       {" "}
-                      @ Southern California Edison
+                      @ Southern California Edison (SCE)
                     </span>
                   </h3>
                   <p className="text-light-gray pb-1 timeline-dates">June 2025 - Present</p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Digital Grid Services, Outage Management Support
+                    Support transition from legacy systems by mapping old workflows to new front-end implementation of incident correction tool
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Propose and implement UI solutions to issues within legacy systems that reduce complexity and streamline user operations
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Integrate GraphQL APIs to manage incident data, ensuring seamless communication between front-end and grid database
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Conduct usability testing with business users to generate feedback, iterate on designs, and improve workflow efficiency
                   </p>
                 </div>
               </li>
@@ -257,19 +269,19 @@ function Home() {
                   <p className="text-light-gray pb-1 timeline-dates">Jan. 2025 - Present</p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Leading front-end development of Course Eater, a year-by-year course planning tool for 100+ UCI students
+                    Lead front-end development of Course Eater, a year-by-year course planning tool for 50+ UCI students
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Coordinating design of Figma prototype and implementation of user interface, improving the overall user experience
+                    Coordinate design of Figma prototype and implementation of user interface, improving the overall user experience
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborating with back-end developers to ensure seamless connectivity between front-end and back-end functionality
+                    Collaborate with back-end developers to ensure seamless connectivity between front-end and back-end functionality
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Migrated app from legacy PeterPortal API to Anteater API by refactoring API calls, ensuring maintainability
+                    Migrate app from legacy PeterPortal API to Anteater API by refactoring API calls, ensuring maintainability
                   </p>
                 </div>
               </li>
@@ -308,9 +320,7 @@ function Home() {
                   <p className="text-light-gray pb-1 timeline-dates">June 2023 - Aug. 2023</p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Consulted with clients from Mentors in Tech, determining
-                    project scope and coordinating all visual and technical
-                    requirements of the website rebuild
+                    Consulted with clients from Mentors in Tech, determining project scope and requirements of the website rebuild
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
@@ -343,10 +353,8 @@ function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborated with instructor to provide constructive
-                    feedback with regards to program efficiency and algorithm
-                    optimization, resulting in ~93% of students passing with a C
-                    or higher
+                    Collaborated with instructor to provide constructive feedback with regards to program efficiency
+                    and algorithm optimization, resulting in ~93% of students passing with a C or higher
                   </p>
                 </div>
               </li>
