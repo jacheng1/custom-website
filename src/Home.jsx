@@ -180,7 +180,7 @@ function Home() {
             </button>
             <a
               className="btn btn-outline-success ms-3"
-              href="https://drive.google.com/file/d/1-DSUUp6MKlAm36Q8WVq673cX09vbbviE/view"
+              href="https://drive.google.com/file/d/1gX_uBoV8ePZ90jUpAKE1sa5KHZXYQOxu/view"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -362,7 +362,7 @@ function Home() {
           </section>
           <a
             className="btn btn-outline-success btn-custom mt-5"
-            href="https://drive.google.com/file/d/1-DSUUp6MKlAm36Q8WVq673cX09vbbviE/view"
+            href="https://drive.google.com/file/d/1gX_uBoV8ePZ90jUpAKE1sa5KHZXYQOxu/view"
             target="_blank"
             rel="noopener noreferrer"
           >
