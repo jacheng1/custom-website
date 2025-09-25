@@ -273,7 +273,7 @@ function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Coordinate design of Figma prototype and implementation of user interface, improving the overall user experience
+                    Coordinate design of Figma prototype and implementation of UI overhaul, improving the overall user experience
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
