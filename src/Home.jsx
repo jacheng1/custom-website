@@ -532,9 +532,9 @@ function Home() {
         <div className="container p-4 text-center">
           <h2 className="text-light-gray">Let&apos;s connect!</h2>
           <p className="text-gray">
-            Currently open to project work, internship role inquiries,
+            Currently open to full-time role inquiries,
             <br />
-            and related opportunities.
+            project work, and related opportunities.
           </p>
           <a
             className="btn btn-outline-success btn-custom mt-4 mb-5"
