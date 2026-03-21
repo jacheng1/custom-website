@@ -138,7 +138,7 @@ body {
 }
 
 #about .description-text-name {
-  color: #58E8C8;
+  color: #58e8c8;
   font-family: "SF Pro Text", sans-serif !important;
 }
 
@@ -215,7 +215,8 @@ body {
   font-size: 18px;
 }
 
-#about .name-text, .statement-text {
+#about .name-text,
+.statement-text {
   font-size: 70px !important;
 }
 
@@ -281,7 +282,7 @@ body {
 #timeline .timeline-arrow {
   position: relative;
   margin-top: 3px;
-  color: #58E8C8;
+  color: #58e8c8;
   flex-shrink: 0;
 }
 
@@ -501,11 +502,12 @@ body {
   #about .intro-text {
     font-size: 12px;
   }
-  
-  #about .name-text, .statement-text {
+
+  #about .name-text,
+  .statement-text {
     font-size: 40px !important;
   }
-  
+
   #about .description-text {
     font-size: 12px !important;
   }
@@ -541,11 +543,12 @@ body {
   #about .intro-text {
     font-size: 16px;
   }
-  
-  #about .name-text, .statement-text {
+
+  #about .name-text,
+  .statement-text {
     font-size: 40px !important;
   }
-  
+
   #about .description-text {
     font-size: 16px !important;
   }

@@ -2,11 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { useState, useEffect } from "react";
 
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { IoMdArrowDropright } from "react-icons/io";
 
 import logo from "/logo.svg";
@@ -17,16 +13,14 @@ import project4 from "/project4.png";
 
 import "./custom.scss";
 
-function Home() {
+export default function Home() {
   const [scrollDirection, setScrollDirection] = useState("up");
   const [isScrolled, setIsScrolled] = useState(false);
 
   // useEffect for handling navbar appearing/disappearing on scroll
   useEffect(() => {
-    // Track latest Y-direction of scroll
     let lastScrollY = window.scrollY;
 
-    // Set scrollDirection to "down" if scrolling down, to "up" if scrolling up
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
         setScrollDirection("down");
@@ -34,14 +28,12 @@ function Home() {
         setScrollDirection("up");
       }
 
-      // Track latest Y-direction of scroll
       lastScrollY = window.scrollY;
 
       // set isScrolled to true, if user scrolls away from top of page
       setIsScrolled(window.scrollY > 0);
     };
 
-    // Add event listener to call handleScroll upon scrolling
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -52,13 +44,11 @@ function Home() {
     // Reference .scss element #hue-effect
     const hue = document.getElementById("hue-effect");
 
-    // Track X and Y-coordinate of mouse cursor
     const handleMouseMove = (e) => {
       hue.style.left = `${e.pageX}px`;
       hue.style.top = `${e.pageY}px`;
     };
 
-    // Add event listener to call handleMouseMove when moving mouse cursor
     window.addEventListener("mousemove", handleMouseMove);
 
     return () => window.removeEventListener("mousemove", handleMouseMove);
@@ -66,13 +56,11 @@ function Home() {
 
   // Helper function to handle scroll into view upon click
   const handleScrollIntoView = (e, id) => {
-    // Prevents button from skipping scroll into view animation
     e.preventDefault();
 
     // Scroll to page section by id
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 
-    // Remove button text highlight after click
     e.target.blur();
   };
 
@@ -104,6 +92,7 @@ function Home() {
   return (
     <body className="bg-custom-blue">
       <div id="hue-effect"></div>
+
       <div className="fixed-left-sidebar d-flex flex-column align-items-center ms-4">
         <a
           className="my-4 text-decoration-none"
@@ -113,6 +102,7 @@ function Home() {
         >
           <FaEnvelope className="fs-4" />
         </a>
+
         <a
           className="my-4 text-decoration-none"
           href="https://linkedin.com/in/jacky-cheng-54516a1ab"
@@ -121,6 +111,7 @@ function Home() {
         >
           <FaLinkedin className="fs-4" />
         </a>
+
         <a
           className="my-4 text-decoration-none"
           href="https://github.com/jacheng1"
@@ -129,11 +120,14 @@ function Home() {
         >
           <FaGithub className="fs-4" />
         </a>
+
         <div className="vertical-line"></div>
       </div>
+
       <div className="fixed-right-sidebar d-flex flex-column align-items-center me-4">
         <div className="vertical-line"></div>
       </div>
+
       <nav
         className={`navbar navbar-light bg-custom-blue p-4 fixed-top ${scrollDirection === "down" ? "hide" : "show"} ${isScrolled ? "navbar-scrolled" : ""}`}
       >
@@ -145,6 +139,7 @@ function Home() {
             width="50"
             height="50"
           />
+
           <form className="d-flex ms-auto align-items-center">
             <button
               onClick={(e) => {
@@ -154,6 +149,7 @@ function Home() {
             >
               <span className="link-number">01.</span> About
             </button>
+
             <button
               onClick={(e) => {
                 handleScrollIntoView(e, "experience");
@@ -162,6 +158,7 @@ function Home() {
             >
               <span className="link-number">02.</span> Experience
             </button>
+
             <button
               onClick={(e) => {
                 handleScrollIntoView(e, "projects");
@@ -170,6 +167,7 @@ function Home() {
             >
               <span className="link-number">03.</span> Projects
             </button>
+
             <button
               onClick={(e) => {
                 handleScrollIntoView(e, "contact");
@@ -178,6 +176,7 @@ function Home() {
             >
               <span className="link-number">04.</span> Contact
             </button>
+
             <a
               className="btn btn-outline-success ms-3"
               href="https://drive.google.com/file/d/1ebxeoWpPYGUvj7W7EwbWwZoZuTshHfex/view"
@@ -189,21 +188,31 @@ function Home() {
           </form>
         </div>
       </nav>
+      
       <div
         id="about"
         className="intro-section bg-custom-blue text-start text-light p-5 mt-5"
       >
         <div className="container p-7 py-7">
           <p className="intro-text">Hi, my name is</p>
-          <h1 className="display-4 fw-bold text-light-gray name-text">Jacky Cheng.</h1>
+
+          <h1 className="display-4 fw-bold text-light-gray name-text">
+            Jacky Cheng.
+          </h1>
+
           <h1 className="display-4 fw-bold text-gray statement-text">
             I build web applications.
           </h1>
+
           <p className="text-gray py-3 description-text">
-            I'm a Computer Science graduate from the <span className="description-text-name">University of California, Irvine</span>
+            I'm a Computer Science graduate from the{" "}
+            <span className="description-text-name">
+              University of California, Irvine
+            </span>
             <br />
             looking to design and deliver intuitive, user-centric web solutions.
           </p>
+
           <button
             className="btn btn-outline-success btn-custom mt-5 mb-5"
             onClick={(e) => {
@@ -214,6 +223,7 @@ function Home() {
           </button>
         </div>
       </div>
+
       <div
         id="experience"
         className="intro-section bg-custom-blue text-start text-light pt-5 pb-5"
@@ -224,6 +234,7 @@ function Home() {
           </h3>
           <div className="horizontal-line"></div>
         </div>
+
         <div className="container p-4 text-center">
           <section id="timeline" className="mb-5">
             <ul>
@@ -237,54 +248,68 @@ function Home() {
                       @ Southern California Edison (SCE)
                     </span>
                   </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">June 2025 - Dec. 2025</p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Supported transition from legacy systems by mapping existing workflows to front-end of an ADMS incident correction tool
+                  <p className="text-light-gray pb-1 timeline-dates">
+                    June 2025 - Dec. 2025
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Designed and implemented UI solutions to issues within legacy tools, streamlining user operations and reducing complexity
+                    Supported transition from legacy systems by mapping existing
+                    workflows to front-end of an ADMS incident correction tool
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Integrated GraphQL APIs to manage incident data, enabling reliable communication between front-end and grid database
+                    Designed and implemented UI solutions to issues within
+                    legacy tools, streamlining user operations and reducing
+                    complexity
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Conducted usability testing with users and iterated on feedback, increasing task completion speed and reducing error rates
+                    Integrated GraphQL APIs to manage incident data, enabling
+                    reliable communication between front-end and grid database
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Conducted usability testing with users and iterated on
+                    feedback, increasing task completion speed and reducing
+                    error rates
                   </p>
                 </div>
               </li>
+
               <li>
                 <i className=""></i>
                 <div className="box">
                   <h3 className="fw-bold text-light-gray timeline-title">
                     Software Developer
-                    <span className="intro-text">
-                      {" "}
-                      @ Ready Tutor
-                    </span>
+                    <span className="intro-text"> @ Ready Tutor</span>
                   </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">Jan. 2025 - Nov. 2025</p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Directed the front-end development of Course Eater, a year-by-year course planning web app for 50+ UCI students
+                  <p className="text-light-gray pb-1 timeline-dates">
+                    Jan. 2025 - Nov. 2025
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Developed and translated Figma prototype into UI implementation, coordinating design decisions and improving usability
+                    Directed the front-end development of Course Eater, a
+                    year-by-year course planning web app for 50+ UCI students
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborate with back-end developers to ensure seamless connectivity between front-end and back-end functionality
+                    Developed and translated Figma prototype into UI
+                    implementation, coordinating design decisions and improving
+                    usability
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Migrated app from legacy PeterPortal API to Anteater API by refactoring API calls, ensuring code maintainability
+                    Collaborate with back-end developers to ensure seamless
+                    connectivity between front-end and back-end functionality
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Migrated app from legacy PeterPortal API to Anteater API by
+                    refactoring API calls, ensuring code maintainability
                   </p>
                 </div>
               </li>
+
               <li>
                 <i className=""></i>
                 <div className="box">
@@ -295,21 +320,27 @@ function Home() {
                       @ Open Avenues Career Pathways
                     </span>
                   </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">Sept. 2023 - Nov. 2023</p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Developed full-stack messenger application that allows a user to send custom SMS messages to a phone number
+                  <p className="text-light-gray pb-1 timeline-dates">
+                    Sept. 2023 - Nov. 2023
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Integrated Twilio REST API in backend, facilitating retrieval of recipient&apos;s phone number
+                    Developed full-stack messenger application that allows a
+                    user to send custom SMS messages to a phone number
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Utilized backend API endpoints, enabling create and read operations on PostgreSQL database
+                    Integrated Twilio REST API in backend, facilitating
+                    retrieval of recipient&apos;s phone number
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Utilized backend API endpoints, enabling create and read
+                    operations on PostgreSQL database
                   </p>
                 </div>
               </li>
+
               <li>
                 <i className=""></i>
                 <div className="box">
@@ -317,21 +348,29 @@ function Home() {
                     Open-Source Software Engineering Intern
                     <span className="intro-text"> @ CodeDay</span>
                   </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">June 2023 - Aug. 2023</p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Consulted with Mentors in Tech to define scope and technical requirements of a client website rebuild
+                  <p className="text-light-gray pb-1 timeline-dates">
+                    June 2023 - Aug. 2023
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Designed front-end architecture via Atomic Design principles, sourcing data from Contentful and distributing across CDN
+                    Consulted with Mentors in Tech to define scope and technical
+                    requirements of a client website rebuild
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Refactored existing UI into modular components, improving ease of content updates for non-technical users and scalability
+                    Designed front-end architecture via Atomic Design
+                    principles, sourcing data from Contentful and distributing
+                    across CDN
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Refactored existing UI into modular components, improving
+                    ease of content updates for non-technical users and
+                    scalability
                   </p>
                 </div>
               </li>
+
               <li>
                 <i className=""></i>
                 <div className="box">
@@ -342,20 +381,26 @@ function Home() {
                       @ City College of San Francisco
                     </span>
                   </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">Jan. 2023 - May 2023</p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Analyzed program efficiency and correctness of 20+ student&apos;s weekly C++ assignments
+                  <p className="text-light-gray pb-1 timeline-dates">
+                    Jan. 2023 - May 2023
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborated with instructor to provide constructive feedback with regards to program efficiency
-                    and algorithm optimization, resulting in ~93% of students passing with a C or higher
+                    Analyzed program efficiency and correctness of 20+
+                    student&apos;s weekly C++ assignments
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Collaborated with instructor to provide constructive
+                    feedback with regards to program efficiency and algorithm
+                    optimization, resulting in ~93% of students passing with a C
+                    or higher
                   </p>
                 </div>
               </li>
             </ul>
           </section>
+
           <a
             className="btn btn-outline-success btn-custom mt-5"
             href="https://drive.google.com/file/d/1ebxeoWpPYGUvj7W7EwbWwZoZuTshHfex/view"
@@ -366,16 +411,19 @@ function Home() {
           </a>
         </div>
       </div>
+
       <div
         id="projects"
         className="intro-section bg-custom-blue text-start text-light pt-5 pb-5"
       >
         <div className="container p-4 d-flex align-items-center">
           <h3 className="fw-bold text-light-gray m-5">
-            <span className="intro-text fw-light">03.</span> Projects I&apos;ve Built
+            <span className="intro-text fw-light">03.</span> Projects I&apos;ve
+            Built
           </h3>
           <div className="horizontal-line"></div>
         </div>
+
         <div className="container p-4 text-center">
           <section id="projects">
             <ul>
@@ -395,8 +443,11 @@ function Home() {
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
-                        A full-stack IoT application built and deployed on AWS EC2, enabling real-time biometric monitoring, fall detection, and wearable device location tracking.
-                        The user can manage patients, monitor their vitals, and view time-based health data trends.
+                        A full-stack IoT application built and deployed on AWS
+                        EC2, enabling real-time biometric monitoring, fall
+                        detection, and wearable device location tracking. The
+                        user can manage patients, monitor their vitals, and view
+                        time-based health data trends.
                       </p>
                     </div>
                     <div className="project-links">
@@ -412,6 +463,7 @@ function Home() {
                   </div>
                 </div>
               </li>
+
               <li>
                 <div className="projects-box d-flex align-items-start">
                   <img
@@ -446,6 +498,7 @@ function Home() {
                   </div>
                 </div>
               </li>
+
               <li>
                 <div className="projects-box d-flex align-items-start">
                   <img
@@ -480,6 +533,7 @@ function Home() {
                   </div>
                 </div>
               </li>
+
               <li>
                 <div className="projects-box d-flex align-items-start">
                   <img
@@ -518,17 +572,21 @@ function Home() {
           </section>
         </div>
       </div>
+
       <div
         id="contact"
         className="intro-section bg-custom-blue text-start text-light pt-5 pb-5"
       >
         <div className="container p-4 d-flex align-items-center justify-content-center">
           <div className="horizontal-line-contact"></div>
+
           <h3 className="fw-bold text-light-gray m-5">
             <span className="intro-text fw-light">04.</span> Contact Info
           </h3>
+
           <div className="horizontal-line-contact"></div>
         </div>
+
         <div className="container p-4 text-center">
           <h2 className="text-light-gray">Let&apos;s connect!</h2>
           <p className="text-gray">
@@ -536,6 +594,7 @@ function Home() {
             <br />
             project work, and related opportunities.
           </p>
+
           <a
             className="btn btn-outline-success btn-custom mt-4 mb-5"
             href="mailto:chjack568@gmail.com"
@@ -546,6 +605,7 @@ function Home() {
           </a>
         </div>
       </div>
+
       <div className="intro-section bg-custom-blue text-light d-flex align-items-center justify-content-center pt-5 pb-5">
         <div className="container text-center">
           <img
@@ -558,11 +618,10 @@ function Home() {
               handleScrollIntoView(e, "about");
             }}
           />
+
           <p className="text-gray text-center mb-0">2026 Jacky Cheng</p>
         </div>
       </div>
     </body>
   );
 }
-
-export default Home;
