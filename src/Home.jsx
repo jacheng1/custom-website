@@ -558,7 +558,7 @@ function Home() {
               handleScrollIntoView(e, "about");
             }}
           />
-          <p className="text-gray text-center mb-0">&copy; 2024 Jacky Cheng</p>
+          <p className="text-gray text-center mb-0">2026 Jacky Cheng</p>
         </div>
       </div>
     </body>
