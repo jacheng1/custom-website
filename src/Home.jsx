@@ -200,9 +200,9 @@ function Home() {
             I build web applications.
           </h1>
           <p className="text-gray py-3 description-text">
-            I'm a computer science student at the <span className="description-text-name">University of California, Irvine</span>
+            I'm a Computer Science graduate from the <span className="description-text-name">University of California, Irvine</span>
             <br />
-            looking to design and implement intuitive, user-centric web solutions.
+            looking to design and deliver intuitive, user-centric web solutions.
           </p>
           <button
             className="btn btn-outline-success btn-custom mt-5 mb-5"
@@ -237,22 +237,22 @@ function Home() {
                       @ Southern California Edison (SCE)
                     </span>
                   </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">June 2025 - Present</p>
+                  <p className="text-light-gray pb-1 timeline-dates">June 2025 - Dec. 2025</p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Support transition from legacy systems by mapping old workflows to new front-end implementation of incident correction tool
+                    Supported transition from legacy systems by mapping existing workflows to front-end of an ADMS incident correction tool
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Propose and implement UI solutions to issues within legacy systems that reduce complexity and streamline user operations
+                    Designed and implemented UI solutions to issues within legacy tools, streamlining user operations and reducing complexity
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Integrate GraphQL APIs to manage incident data, ensuring seamless communication between front-end and grid database
+                    Integrated GraphQL APIs to manage incident data, enabling reliable communication between front-end and grid database
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Conduct usability testing with business users to generate feedback, iterate on designs, and improve workflow efficiency
+                    Conducted usability testing with users and iterated on feedback, increasing task completion speed and reducing error rates
                   </p>
                 </div>
               </li>
@@ -266,14 +266,14 @@ function Home() {
                       @ Ready Tutor
                     </span>
                   </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">Jan. 2025 - Present</p>
+                  <p className="text-light-gray pb-1 timeline-dates">Jan. 2025 - Nov. 2025</p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Lead front-end development of Course Eater, a year-by-year course planning tool for 50+ UCI students
+                    Directed the front-end development of Course Eater, a year-by-year course planning web app for 50+ UCI students
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Coordinate design of Figma prototype and implementation of UI overhaul, improving the overall user experience
+                    Developed and translated Figma prototype into UI implementation, coordinating design decisions and improving usability
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
@@ -281,7 +281,7 @@ function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Migrate app from legacy PeterPortal API to Anteater API by refactoring API calls, ensuring maintainability
+                    Migrated app from legacy PeterPortal API to Anteater API by refactoring API calls, ensuring code maintainability
                   </p>
                 </div>
               </li>
@@ -320,19 +320,15 @@ function Home() {
                   <p className="text-light-gray pb-1 timeline-dates">June 2023 - Aug. 2023</p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Consulted with clients from Mentors in Tech, determining project scope and requirements of the website rebuild
+                    Consulted with Mentors in Tech to define scope and technical requirements of a client website rebuild
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Utilized Agile methodologies, Gitflow, and continuous
-                    integration process to create design system via Atomic
-                    Design principles and build front-end that sources data from
-                    Contentful CMS and is distributed across a global CDN
+                    Designed front-end architecture via Atomic Design principles, sourcing data from Contentful and distributing across CDN
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Modularized visual elements of original website into
-                    reusable components, improving end user editability
+                    Refactored existing UI into modular components, improving ease of content updates for non-technical users and scalability
                   </p>
                 </div>
               </li>
