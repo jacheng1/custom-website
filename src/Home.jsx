@@ -245,6 +245,45 @@ export default function Home() {
                     Information Technology Intern
                     <span className="intro-text">
                       {" "}
+                      @ San Francisco International Airport (SFO)
+                    </span>
+                  </h3>
+                  <p className="text-light-gray pb-1 timeline-dates">
+                    May 2026 - Aug. 2026
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Architected cloud-native Kafka infrastructure supporting AIOC&apos;s migration 
+                    of INRIX data ingestion from MSK to Confluent
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Leveraged Terraform to automate Kafka infrastructure provisioning across 
+                    DTAP environments, facilitating scalable, repeatable, and reliable deployments 
+                    of data streaming components
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Enhanced custom Kafka producer to support SSL/TLS, SASL authentication, and 
+                    Schema Registry integration, enabling the secure publishing of traffic events 
+                    to Confluent Cloud
+                  </p>
+                  <p className="text-gray timeline-description">
+                    <IoMdArrowDropright className="timeline-arrow me-2" />
+                    Collaborated with cross-functional teams to design, implement, test, and deploy 
+                    enterprise-scale event streaming solutions, contributing to the modernization of 
+                    SFO&apos;s Kafka platform
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <i className=""></i>
+                <div className="box">
+                  <h3 className="fw-bold text-light-gray timeline-title">
+                    Information Technology Intern
+                    <span className="intro-text">
+                      {" "}
                       @ Southern California Edison (SCE)
                     </span>
                   </h3>
@@ -253,25 +292,24 @@ export default function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Supported transition from legacy systems by mapping existing
-                    workflows to front-end of an ADMS incident correction tool
+                    Designed Figma prototypes and implemented front-end workflows 
+                    accelerating a department-wide transition from a legacy system 
+                    to a new ADMS incident correction tool used by 20+ internal users
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Designed and implemented UI solutions to issues within
-                    legacy tools, streamlining user operations and reducing
-                    complexity
+                    Developed UI solutions for usability issues identified in the legacy 
+                    tool, streamlining user operations and reducing complexity
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Integrated GraphQL APIs to manage incident data, enabling
-                    reliable communication between front-end and grid database
+                    Integrated GraphQL APIs to manage incident data, enabling reliable 
+                    communication between the front-end and grid database
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Conducted usability testing with users and iterated on
-                    feedback, increasing task completion speed and reducing
-                    error rates
+                    Conducted usability testing and implemented UI iterations, 
+                    increasing task completion speed and reducing error rates
                   </p>
                 </div>
               </li>
@@ -288,24 +326,23 @@ export default function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Directed the front-end development of Course Eater, a
-                    year-by-year course planning web app for 50+ UCI students
+                    Directed front-end development of Course Eater, a year-by-year 
+                    course planning web app serving 100+ UCI students
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Developed and translated Figma prototype into UI
-                    implementation, coordinating design decisions and improving
-                    usability
+                    Translated Figma prototypes into responsive UI implementations, 
+                    coordinating design decisions and improving app usability
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborate with back-end developers to ensure seamless
-                    connectivity between front-end and back-end functionality
+                    Migrated app from legacy PeterPortal API to Anteater API by refactoring 
+                    API integrations, ensuring codebase maintainability
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Migrated app from legacy PeterPortal API to Anteater API by
-                    refactoring API calls, ensuring code maintainability
+                    Collaborated with back-end developers to ensure seamless connectivity 
+                    between front-end and back-end functionality
                   </p>
                 </div>
               </li>
