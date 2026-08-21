@@ -205,7 +205,7 @@ export default function Home() {
           </h1>
 
           <p className="text-gray py-3 description-text">
-            I'm a Computer Science graduate from the{" "}
+            I&apos;m a Computer Science graduate from the{" "}
             <span className="description-text-name">
               University of California, Irvine
             </span>
