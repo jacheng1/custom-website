@@ -179,7 +179,7 @@ export default function Home() {
 
             <a
               className="btn btn-outline-success ms-3"
-              href="https://drive.google.com/file/d/1ebxeoWpPYGUvj7W7EwbWwZoZuTshHfex/view"
+              href="https://drive.google.com/file/d/1P70RLE2ZTPkYs18AGMZ8GOscl5i6HkTZ/view"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -403,7 +403,7 @@ export default function Home() {
 
           <a
             className="btn btn-outline-success btn-custom mt-5"
-            href="https://drive.google.com/file/d/1ebxeoWpPYGUvj7W7EwbWwZoZuTshHfex/view"
+            href="https://drive.google.com/file/d/1P70RLE2ZTPkYs18AGMZ8GOscl5i6HkTZ/view"
             target="_blank"
             rel="noopener noreferrer"
           >
