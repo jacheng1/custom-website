@@ -442,18 +442,19 @@ export default function Home() {
                   />
                   <div>
                     <div className="d-flex align-items-center justify-content-between">
-                      <p className="intro-text pb-0">Featured Project</p>
+                      <p className="intro-text">Featured Project</p>
                     </div>
                     <h3 className="fw-bold text-light-gray mt-1 pb-3">
                       Senior Sense Solutions
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
-                        A full-stack IoT application built and deployed on AWS
-                        EC2, enabling real-time biometric monitoring, fall
-                        detection, and wearable device location tracking. The
-                        user can manage patients, monitor their vitals, and view
-                        time-based health data trends.
+                        A full-stack IoT monitoring platform built and deployed on AWS
+                        EC2, enabling enabling sub-second ingestion and visualization of 
+                        real-time health metrics from a connected wrist sensor device.
+                        <br/>
+                        Contains dashboards for biometric monitoring, fall detection,
+                        and device geolocation.
                       </p>
                     </div>
                     <div className="project-links">
@@ -479,7 +480,7 @@ export default function Home() {
                   />
                   <div>
                     <div className="d-flex align-items-center justify-content-between">
-                      <p className="intro-text pb-0">Featured Project</p>
+                      <p className="intro-text">Featured Project</p>
                     </div>
                     <h3 className="fw-bold text-light-gray mt-1 pb-3">
                       Fabflix
@@ -488,7 +489,11 @@ export default function Home() {
                       <p className="text-gray p-4 projects-description-text">
                         A full-stack e-commerce application built and deployed
                         on AWS EC2, enabling users to browse, sort, and search
-                        for movies.
+                        across a 37,000+ movie dataset.
+                        <br/>
+                        Integrates an Apache load balancer to distribute traffic,
+                        and is scaled on a Kubernetes cluster spanning multiple
+                        nodes for high availability and scalability.
                       </p>
                     </div>
                     <div className="project-links">
@@ -514,16 +519,19 @@ export default function Home() {
                   />
                   <div>
                     <div className="d-flex align-items-center justify-content-between">
-                      <p className="intro-text pb-0">Featured Project</p>
+                      <p className="intro-text">Featured Project</p>
                     </div>
                     <h3 className="fw-bold text-light-gray mt-1 pb-3">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zotsearch
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
-                        A search engine, built from the ground up, that utilizes
-                        a corpus of over 55,000 web pages and achieves results
-                        in less than 300 ms.
+                        A full-stack search engine that indexes a 55,000+ web page
+                        corpus with &lt;300 ms response times.
+                        <br/>
+                        Implements a custom inverted index, and integrates ranked
+                        retrieval and tf-idf scoring scheme to return relevant search
+                        results.
                       </p>
                     </div>
                     <div className="project-links">
@@ -549,7 +557,7 @@ export default function Home() {
                   />
                   <div>
                     <div className="d-flex align-items-center justify-content-between">
-                      <p className="intro-text pb-0">Featured Project</p>
+                      <p className="intro-text">Featured Project</p>
                     </div>
                     <h3 className="fw-bold text-light-gray mt-1 pb-3">
                       iManager
@@ -557,8 +565,11 @@ export default function Home() {
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
                         A full-stack inventory management application that
-                        stores user-defined items, each configurable by name and
-                        quantity.
+                        stores user-defined items, each manageable via manual CRUD 
+                        operations.
+                        <br/>
+                        Integrated Llama 3 LLM to generate recipe combinations based
+                        on documents stored in Firestore database.
                       </p>
                     </div>
                     <div className="project-links">

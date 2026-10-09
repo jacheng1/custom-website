@@ -212,7 +212,7 @@ body {
 }
 
 #about .intro-text {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 #about .name-text,
@@ -450,7 +450,6 @@ body {
   background-color: #0f2341;
   box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  overflow: hidden;
   z-index: 2;
 }
 
@@ -464,10 +463,8 @@ body {
 }
 
 #projects ul li .project-links {
-  margin-left: 0;
-  margin-right: -60px;
-  margin-top: 10px;
   display: inline-block;
+  margin-right: -60px;
   z-index: 100;
 }
 
