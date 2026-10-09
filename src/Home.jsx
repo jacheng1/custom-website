@@ -351,37 +351,6 @@ export default function Home() {
                 <i className=""></i>
                 <div className="box">
                   <h3 className="fw-bold text-light-gray timeline-title">
-                    Student Consultant, Software Development
-                    <span className="intro-text">
-                      {" "}
-                      @ Open Avenues Career Pathways
-                    </span>
-                  </h3>
-                  <p className="text-light-gray pb-1 timeline-dates">
-                    Sept. 2023 - Nov. 2023
-                  </p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Developed full-stack messenger application that allows a
-                    user to send custom SMS messages to a phone number
-                  </p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Integrated Twilio REST API in backend, facilitating
-                    retrieval of recipient&apos;s phone number
-                  </p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Utilized backend API endpoints, enabling create and read
-                    operations on PostgreSQL database
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <i className=""></i>
-                <div className="box">
-                  <h3 className="fw-bold text-light-gray timeline-title">
                     Open-Source Software Engineering Intern
                     <span className="intro-text"> @ CodeDay</span>
                   </h3>
