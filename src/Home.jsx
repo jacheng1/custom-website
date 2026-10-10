@@ -41,7 +41,6 @@ export default function Home() {
 
   // useEffect for hue that moves with mouse cursor
   useEffect(() => {
-    // Reference .scss element #hue-effect
     const hue = document.getElementById("hue-effect");
 
     const handleMouseMove = (e) => {
@@ -188,7 +187,7 @@ export default function Home() {
           </form>
         </div>
       </nav>
-      
+
       <div
         id="about"
         className="intro-section bg-custom-blue text-start text-light p-5 mt-5"
@@ -253,26 +252,29 @@ export default function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Architected cloud-native Kafka infrastructure supporting AIOC&apos;s migration 
-                    of INRIX data ingestion from MSK to Confluent
+                    Architected cloud-native Kafka infrastructure supporting
+                    AIOC&apos;s migration of INRIX data ingestion from MSK to
+                    Confluent
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Leveraged Terraform to automate Kafka infrastructure provisioning across 
-                    DTAP environments, facilitating scalable, repeatable, and reliable deployments 
-                    of data streaming components
+                    Leveraged Terraform to automate Kafka infrastructure
+                    provisioning across DTAP environments, facilitating
+                    scalable, repeatable, and reliable deployments of data
+                    streaming components
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Enhanced custom Kafka producer to support SSL/TLS, SASL authentication, and 
-                    Schema Registry integration, enabling the secure publishing of traffic events 
-                    to Confluent Cloud
+                    Enhanced custom Kafka producer to support SSL/TLS, SASL
+                    authentication, and Schema Registry integration, enabling
+                    the secure publishing of traffic events to Confluent Cloud
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborated with cross-functional teams to design, implement, test, and deploy 
-                    enterprise-scale event streaming solutions, contributing to the modernization of 
-                    SFO&apos;s Kafka platform
+                    Collaborated with cross-functional teams to design,
+                    implement, test, and deploy enterprise-scale event streaming
+                    solutions, contributing to the modernization of SFO&apos;s
+                    Kafka platform
                   </p>
                 </div>
               </li>
@@ -292,23 +294,26 @@ export default function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Designed Figma prototypes and implemented front-end workflows 
-                    accelerating a department-wide transition from a legacy system 
-                    to a new ADMS incident correction tool used by 20+ internal users
+                    Designed Figma prototypes and implemented front-end
+                    workflows accelerating a department-wide transition from a
+                    legacy system to a new ADMS incident correction tool used by
+                    20+ internal users
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Developed UI solutions for usability issues identified in the legacy 
-                    tool, streamlining user operations and reducing complexity
+                    Developed UI solutions for usability issues identified in
+                    the legacy tool, streamlining user operations and reducing
+                    complexity
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Integrated GraphQL APIs to manage incident data, enabling reliable 
-                    communication between the front-end and grid database
+                    Integrated GraphQL APIs to manage incident data, enabling
+                    reliable communication between the front-end and grid
+                    database
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Conducted usability testing and implemented UI iterations, 
+                    Conducted usability testing and implemented UI iterations,
                     increasing task completion speed and reducing error rates
                   </p>
                 </div>
@@ -326,23 +331,26 @@ export default function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Directed front-end development of Course Eater, a year-by-year 
-                    course planning web app serving 100+ UCI students
+                    Directed front-end development of Course Eater, a
+                    year-by-year course planning web app serving 100+ UCI
+                    students
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Translated Figma prototypes into responsive UI implementations, 
-                    coordinating design decisions and improving app usability
+                    Translated Figma prototypes into responsive UI
+                    implementations, coordinating design decisions and improving
+                    app usability
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Migrated app from legacy PeterPortal API to Anteater API by refactoring 
-                    API integrations, ensuring codebase maintainability
+                    Migrated app from legacy PeterPortal API to Anteater API by
+                    refactoring API integrations, ensuring codebase
+                    maintainability
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborated with back-end developers to ensure seamless connectivity 
-                    between front-end and back-end functionality
+                    Collaborated with back-end developers to ensure seamless
+                    connectivity between front-end and back-end functionality
                   </p>
                 </div>
               </li>
@@ -449,12 +457,13 @@ export default function Home() {
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
-                        A full-stack IoT monitoring platform built and deployed on AWS
-                        EC2, enabling enabling sub-second ingestion and visualization of 
-                        real-time health metrics from a connected wrist sensor device.
-                        <br/>
-                        Contains dashboards for biometric monitoring, fall detection,
-                        and device geolocation.
+                        A full-stack IoT monitoring platform built and deployed
+                        on AWS EC2, enabling enabling sub-second ingestion and
+                        visualization of real-time health metrics from a
+                        connected wrist sensor device.
+                        <br />
+                        Contains dashboards for biometric monitoring, fall
+                        detection, and device geolocation.
                       </p>
                     </div>
                     {/* <ul className="project-skills text-light-gray">
@@ -500,10 +509,10 @@ export default function Home() {
                         A full-stack e-commerce application built and deployed
                         on AWS EC2, enabling users to browse, sort, and search
                         across a 37,000+ movie dataset.
-                        <br/>
-                        Integrates an Apache load balancer to distribute traffic,
-                        and is scaled on a Kubernetes cluster spanning multiple
-                        nodes for high availability and scalability.
+                        <br />
+                        Integrates an Apache load balancer to distribute
+                        traffic, and is scaled on a Kubernetes cluster spanning
+                        multiple nodes for high availability and scalability.
                       </p>
                     </div>
                     <div className="project-links">
@@ -536,12 +545,12 @@ export default function Home() {
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
-                        A full-stack search engine that indexes a 55,000+ web page
-                        corpus with &lt;300 ms response times.
-                        <br/>
-                        Implements a custom inverted index, and integrates ranked
-                        retrieval and tf-idf scoring scheme to return relevant search
-                        results.
+                        A full-stack search engine that indexes a 55,000+ web
+                        page corpus with &lt;300 ms response times.
+                        <br />
+                        Implements a custom inverted index, and integrates
+                        ranked retrieval and tf-idf scoring scheme to return
+                        relevant search results.
                       </p>
                     </div>
                     <div className="project-links">
@@ -575,11 +584,11 @@ export default function Home() {
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
                         A full-stack inventory management application that
-                        stores user-defined items, each manageable via manual CRUD 
-                        operations.
-                        <br/>
-                        Integrated Llama 3 LLM to generate recipe combinations based
-                        on documents stored in Firestore database.
+                        stores user-defined items, each manageable via manual
+                        CRUD operations.
+                        <br />
+                        Integrated Llama 3 LLM to generate recipe combinations
+                        based on documents stored in Firestore database.
                       </p>
                     </div>
                     <div className="project-links">
