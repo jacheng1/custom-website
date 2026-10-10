@@ -17,7 +17,7 @@ export default function Home() {
   const [scrollDirection, setScrollDirection] = useState("up");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // useEffect for handling navbar appearing/disappearing on scroll
+  // Handle navbar appearing/disappearing on scroll
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -39,7 +39,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // useEffect for hue that moves with mouse cursor
+  // Handle mouse cursor hue effect
   useEffect(() => {
     const hue = document.getElementById("hue-effect");
 
@@ -53,7 +53,7 @@ export default function Home() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Helper function to handle scroll into view upon click
+  // Handle scroll into view upon navbar button click
   const handleScrollIntoView = (e, id) => {
     e.preventDefault();
 
@@ -70,16 +70,16 @@ export default function Home() {
   window.addEventListener("scroll", displayTimeline);
   displayTimeline();
 
-  // Helper function to handle timeline animations
+  // Handle timeline animations
   function displayTimeline() {
-    // Set animation trigger for window
     const bottomTrigger = (window.innerHeight / 5) * 4;
 
     boxes.forEach((box) => {
       // Retrieve box position relative to viewport
       const topBox = box.getBoundingClientRect().top;
 
-      // If topBox < triggerBottom position, add box to timeline via slide-in animation. If not, remove box from timeline via slide-out animation
+      // If topBox < bottomTrigger position, add box to timeline via slide-in animation
+      // Else, remove box from timeline via slide-out animation
       if (topBox < bottomTrigger) {
         box.classList.add("show");
       } else {
