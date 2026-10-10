@@ -1,133 +1,9 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-
-$theme-colors: (
-  "custom-blue": #0a192f,
-  "custom-green": #58e8c8,
-  "custom-light-gray": #ccd6f6,
-  "custom-gray": #8892b0,
-);
-
-* {
-  font-family: "Terminal", monospace !important;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0a192f;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #525869;
-  min-height: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #8892b0;
-}
-
-.fixed-left-sidebar {
-  background-color: transparent;
-  position: fixed;
-  left: 0;
-  top: 35%;
-  bottom: 0;
-  width: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 1rem;
-  z-index: 19;
-}
-
-.fixed-right-sidebar {
-  background-color: transparent;
-  position: fixed;
-  right: 0;
-  top: 35%;
-  bottom: 0;
-  width: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 1rem;
-  z-index: 19;
-}
-
-.fs-4 {
-  color: #8892b0;
-  transition: color 0.3s ease;
-}
-
-.fs-4:hover {
-  color: #58e8c8;
-}
-
-.vertical-line {
-  background-color: #525869;
-  width: 1px;
-  flex-grow: 1;
-  margin-top: 1rem;
-}
-
-.logo {
-  position: relative;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 20;
-  width: 100%;
-  top: 0;
-  transition: transform 0.3s ease !important;
-}
-
-.navbar.hide {
-  transform: translateY(-100%) !important;
-}
-
-.navbar.show {
-  transform: translateY(0) !important;
-}
-
-.navbar-scrolled {
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.container {
-  position: relative !important;
-  z-index: 10 !important;
-}
-
-.container-fluid {
-  position: relative !important;
-  z-index: 15 !important;
-}
-
-.p-7 {
-  padding: 10rem !important;
-}
-
-.py-7 {
-  padding-top: 9rem !important;
-}
+@use "bootstrap";
+@use "variables";
+@use "base";
+@use "layout";
+@use "navigation";
+@use "buttons";
 
 #about .btn-outline-success {
   margin-top: 25px !important;
@@ -140,71 +16,6 @@ body {
 #about .description-text-name {
   color: #58e8c8;
   font-family: "SF Pro Text", sans-serif !important;
-}
-
-#hue-effect {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background: rgba(22, 50, 95, 0.6);
-  box-shadow: 0px 0px 500px 150px rgba(22, 50, 95, 0.6);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: all 0.1s ease-out;
-  z-index: 5;
-}
-
-.link-number {
-  color: #58e8c8 !important;
-}
-
-.btn-outline-light {
-  color: #ccd6f6 !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  position: relative !important;
-}
-
-.btn-outline-light:hover,
-.btn-outline-light:focus,
-.btn-outline-light:active {
-  color: #58e8c8 !important;
-  border-color: transparent !important;
-  background-color: transparent !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-}
-
-.btn-outline-light::after {
-  content: "" !important;
-  position: absolute !important;
-  width: 100% !important;
-  transform: scaleX(0) !important;
-  height: 2px !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  background-color: #58e8c8 !important;
-  transition: transform 0.25s ease-out !important;
-}
-
-.btn-outline-light:hover::after {
-  transform: scaleX(1) !important;
-  transform-origin: bottom left !important;
-}
-
-.btn-outline-success {
-  color: #58e8c8 !important;
-  border-color: #58e8c8 !important;
-}
-
-.btn-outline-success:hover {
-  color: #ffffff !important;
-  background-color: #58e8c8 !important;
-}
-
-.btn-custom {
-  padding: 15px 25px !important;
 }
 
 .intro-text {
@@ -222,28 +33,6 @@ body {
 
 #about .description-text {
   font-size: 18px !important;
-}
-
-.text-light-gray {
-  color: #ccd6f6 !important;
-}
-
-.text-gray {
-  color: #97a2c2 !important;
-}
-
-.horizontal-line {
-  height: 1px;
-  width: 30%;
-  background-color: rgb(100 116 139 / 30%);
-  margin-left: 1rem;
-}
-
-.horizontal-line-contact {
-  height: 1px;
-  width: 15%;
-  background-color: rgb(100 116 139 / 30%);
-  margin-left: 1rem;
 }
 
 #timeline {
@@ -462,6 +251,15 @@ body {
   font-family: "SF Pro Text", sans-serif !important;
 }
 
+/*
+#projects ul li .project-skills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 175%;
+}
+*/
+
 #projects ul li .project-links {
   display: inline-block;
   margin-right: -60px;
@@ -629,5 +427,3 @@ body {
     text-align: center;
   }
 }
-
-@import "bootstrap/scss/bootstrap";

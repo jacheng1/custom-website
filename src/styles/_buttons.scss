@@ -1,0 +1,54 @@
+@use "variables";
+
+.link-number {
+  color: variables.$custom-green;
+}
+
+.btn-outline-light {
+  color: variables.$custom-light-gray;
+  border: none !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active {
+  color: variables.$custom-green;
+  border-color: transparent !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-light::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 100% !important;
+  transform: scaleX(0) !important;
+  height: 2px !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  background-color: variables.$custom-green;
+  transition: transform 0.25s ease-out !important;
+}
+
+.btn-outline-light:hover::after {
+  transform: scaleX(1) !important;
+  transform-origin: bottom left !important;
+}
+
+.btn-outline-success {
+  color: variables.$custom-green;
+  border-color: variables.$custom-green;
+}
+
+.btn-outline-success:hover {
+  color: #ffffff;
+  background-color: variables.$custom-green;
+}
+
+.btn-custom {
+  padding: 15px 25px !important;
+}

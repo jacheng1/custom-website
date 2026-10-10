@@ -1,0 +1,65 @@
+@use "variables";
+
+.fixed-left-sidebar {
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  top: 35%;
+  bottom: 0;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  z-index: 19;
+}
+
+.fixed-right-sidebar {
+  background-color: transparent;
+  position: fixed;
+  right: 0;
+  top: 35%;
+  bottom: 0;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  z-index: 19;
+}
+
+.vertical-line {
+  background-color: variables.$custom-dark-gray;
+  width: 1px;
+  flex-grow: 1;
+  margin-top: 1rem;
+}
+
+.horizontal-line {
+  height: 1px;
+  width: 30%;
+  background-color: rgb(100 116 139 / 30%);
+  margin-left: 1rem;
+}
+
+.horizontal-line-contact {
+  height: 1px;
+  width: 15%;
+  background-color: rgb(100 116 139 / 30%);
+  margin-left: 1rem;
+}
+
+#hue-effect {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: rgba(22, 50, 95, 0.6);
+  box-shadow: 0px 0px 500px 150px rgba(22, 50, 95, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease-out;
+  z-index: 5;
+}

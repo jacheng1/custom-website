@@ -11,7 +11,7 @@ import project2 from "/project2.png";
 import project3 from "/project3.png";
 import project4 from "/project4.png";
 
-import "./custom.scss";
+import "./styles/custom.scss";
 
 export default function Home() {
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -457,6 +457,16 @@ export default function Home() {
                         and device geolocation.
                       </p>
                     </div>
+                    {/* <ul className="project-skills text-light-gray">
+                      <li>React</li>
+                      <li>Next.js</li>
+                      <li>Express.js</li>
+                      <li>TypeScript</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>PostgreSQL</li>
+                      <li>AWS</li>
+                    </ul> */}
                     <div className="project-links">
                       <a
                         className="text-decoration-none ms-3"
