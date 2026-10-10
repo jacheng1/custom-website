@@ -1,0 +1,167 @@
+#projects {
+  overflow: hidden;
+}
+
+#projects ul li {
+  list-style: none;
+  position: relative;
+  width: 1px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#projects ul li .projects-box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  bottom: 0;
+  width: 450px;
+  text-align: center;
+}
+
+#projects ul li:nth-child(even) .projects-box {
+  left: 60px;
+  flex-direction: row-reverse;
+}
+
+#projects ul li:nth-child(odd) .projects-box {
+  left: -515px;
+}
+
+#projects ul li:nth-child(odd) .projects-box .intro-text,
+#projects ul li:nth-child(odd) .projects-box h3 {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  text-align: right;
+  align-items: flex-end;
+  z-index: 101 !important;
+}
+
+#projects ul li:nth-child(even) .projects-box .intro-text,
+#projects ul li:nth-child(even) .projects-box h3 {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  text-align: left;
+  align-items: flex-start;
+  z-index: 101 !important;
+}
+
+#projects ul li img {
+  position: relative;
+  width: 700px;
+  height: auto;
+  border-radius: 5px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+#projects ul li .projects-box .intro-text {
+  text-align: right;
+  width: 62%;
+  margin: 0;
+  z-index: 30;
+}
+
+#projects ul li .projects-box h3 {
+  margin-left: 155px !important;
+  margin-right: 0 !important;
+  width: 100%;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: center;
+  display: flex;
+}
+
+#projects ul li:nth-child(odd) .projects-box h3 {
+  margin-left: -60px !important;
+  margin-right: 0 !important;
+  width: 100%;
+  text-align: right !important;
+  justify-content: flex-start !important;
+  align-items: center;
+  display: flex;
+}
+
+#projects ul li:nth-child(even) .projects-box .intro-text {
+  text-align: right;
+  width: 66%;
+}
+
+#projects ul li .projects-description-box {
+  position: relative;
+  bottom: 0;
+  right: 170px;
+  width: 450px;
+  text-align: right;
+  background-color: #0f2341;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 2;
+}
+
+#projects ul li:nth-child(even) .projects-description-box {
+  left: 150px;
+  text-align: left;
+}
+
+#projects ul li .projects-description-text {
+  font-family: "SF Pro Text", sans-serif !important;
+}
+
+/*
+#projects ul li .project-skills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 175%;
+}
+*/
+
+#projects ul li .project-links {
+  display: inline-block;
+  margin-right: -60px;
+  z-index: 100;
+}
+
+#projects ul li:nth-child(even) .project-links {
+  margin-right: 130px;
+  z-index: 100;
+}
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 900px) {
+
+}
+
+@media (max-width: 760px) {
+  #projects ul li img {
+    width: 700px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  #projects ul li .projects-description-box {
+    bottom: 100px;
+    right: 450px;
+    padding: 35px;
+    background-color: rgb(15 35 65 / 95%);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  #projects ul li:nth-child(even) .projects-description-box {
+    left: 420px;
+    text-align: center;
+  }
+}

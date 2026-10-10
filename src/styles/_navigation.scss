@@ -35,3 +35,35 @@
 .fs-4:hover {
   color: variables.$custom-green;
 }
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 900px) {
+  
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .navbar .d-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .navbar .btn {
+    width: auto;
+  }
+
+  .fs-4 {
+    display: none;
+  }
+}

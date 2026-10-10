@@ -63,3 +63,25 @@
   transition: all 0.1s ease-out;
   z-index: 5;
 }
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 900px) {
+  
+}
+
+@media (max-width: 760px) {
+  .vertical-line {
+    display: none;
+  }
+
+  .horizontal-line {
+    display: none;
+  }
+
+  .horizontal-line-contact {
+    display: none;
+  }
+}

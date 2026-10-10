@@ -1,0 +1,63 @@
+@use "variables";
+
+#about .btn-outline-success {
+  margin-top: 25px !important;
+}
+
+#about .description-text {
+  font-family: "SF Pro Text", sans-serif !important;
+}
+
+#about .description-text-name {
+  color: variables.$custom-green;
+  font-family: "SF Pro Text", sans-serif !important;
+}
+
+#about .intro-text {
+  font-size: 18px !important;
+}
+
+#about .name-text,
+.statement-text {
+  font-size: 70px !important;
+}
+
+#about .description-text {
+  font-size: 18px !important;
+}
+
+@media (max-width: 1400px) {
+  #about .btn-outline-success {
+    margin-top: 5px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #about .intro-text {
+    font-size: 12px;
+  }
+
+  #about .name-text,
+  .statement-text {
+    font-size: 40px !important;
+  }
+
+  #about .description-text {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #about .intro-text {
+    font-size: 16px;
+  }
+
+  #about .name-text,
+  .statement-text {
+    font-size: 40px !important;
+  }
+
+  #about .description-text {
+    font-size: 16px !important;
+  }
+}
