@@ -271,10 +271,9 @@ export default function Home() {
                   </p>
                   <p className="text-gray timeline-description">
                     <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborated with cross-functional teams to design,
-                    implement, test, and deploy enterprise-scale event streaming
-                    solutions, contributing to the modernization of SFO&apos;s
-                    Kafka platform
+                    Contributed to modernization of SFO&apos;s enterprise Kafka 
+                    platform by deploying scalable event-streaming solutions in 
+                    collaboration with cross-functional teams
                   </p>
                 </div>
               </li>
@@ -346,11 +345,6 @@ export default function Home() {
                     Migrated app from legacy PeterPortal API to Anteater API by
                     refactoring API integrations, ensuring codebase
                     maintainability
-                  </p>
-                  <p className="text-gray timeline-description">
-                    <IoMdArrowDropright className="timeline-arrow me-2" />
-                    Collaborated with back-end developers to ensure seamless
-                    connectivity between front-end and back-end functionality
                   </p>
                 </div>
               </li>
