@@ -3,10 +3,10 @@
 }
 
 #projects ul li {
-  list-style: none;
   position: relative;
+  list-style: none;
   width: 1px;
-  height: 400px;
+  height: 430px;
   margin: 0 auto;
   padding: 0;
 }
@@ -21,35 +21,6 @@
   text-align: center;
 }
 
-#projects ul li:nth-child(even) .projects-box {
-  left: 60px;
-  flex-direction: row-reverse;
-}
-
-#projects ul li:nth-child(odd) .projects-box {
-  left: -515px;
-}
-
-#projects ul li:nth-child(odd) .projects-box .intro-text,
-#projects ul li:nth-child(odd) .projects-box h3 {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  text-align: right;
-  align-items: flex-end;
-  z-index: 101 !important;
-}
-
-#projects ul li:nth-child(even) .projects-box .intro-text,
-#projects ul li:nth-child(even) .projects-box h3 {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  text-align: left;
-  align-items: flex-start;
-  z-index: 101 !important;
-}
-
 #projects ul li img {
   position: relative;
   width: 700px;
@@ -60,36 +31,56 @@
   z-index: 1;
 }
 
+#projects ul li:nth-child(even) .projects-box {
+  left: 60px;
+  flex-direction: row-reverse;
+}
+
+#projects ul li:nth-child(odd) .projects-box {
+  left: -515px;
+}
+
 #projects ul li .projects-box .intro-text {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
   text-align: right;
   width: 62%;
   margin: 0;
-  z-index: 30;
+  font-size: 14px;
+  z-index: 101 !important;
 }
 
-#projects ul li .projects-box h3 {
-  margin-left: 155px !important;
-  margin-right: 0 !important;
-  width: 100%;
-  text-align: left !important;
-  justify-content: flex-start !important;
-  align-items: center;
-  display: flex;
-}
-
-#projects ul li:nth-child(odd) .projects-box h3 {
-  margin-left: -60px !important;
-  margin-right: 0 !important;
-  width: 100%;
-  text-align: right !important;
-  justify-content: flex-start !important;
-  align-items: center;
-  display: flex;
+#projects ul li:nth-child(odd) .projects-box .intro-text {
+  align-items: flex-end;
 }
 
 #projects ul li:nth-child(even) .projects-box .intro-text {
+  align-items: flex-start;
+}
+
+#projects ul li .projects-box h3 {
+  display: flex;
+  position: relative;
+  justify-content: flex-start !important;
+  width: 100%;
+  z-index: 101 !important;
+}
+
+#projects ul li:nth-child(odd) .projects-box h3 {
+  justify-content: flex-end !important;
+  align-items: flex-end;
   text-align: right;
-  width: 66%;
+  margin-left: -170px !important;
+  margin-right: 0 !important;
+}
+
+#projects ul li:nth-child(even) .projects-box h3 {
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 155px !important;
+  margin-right: 0 !important;
 }
 
 #projects ul li .projects-description-box {
@@ -113,14 +104,40 @@
   font-family: "SF Pro Text", sans-serif !important;
 }
 
-/*
-#projects ul li .project-skills {
+#projects ul li .project-skills-odd {
   display: flex;
+  position: relative;
   justify-content: flex-start;
   align-items: center;
-  width: 175%;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  gap: 0.5rem 1rem;
+  margin: 0 -12rem 0.8rem;
+  z-index: 3;
 }
-*/
+
+#projects ul li .project-skills-even {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  gap: 0.5rem 1rem;
+  margin: 0 -12rem 0.8rem 8rem;
+  z-index: 3;
+}
+
+#projects ul li .project-skills-odd li,
+#projects ul li .project-skills-even li {
+  font-size: 14px;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 
 #projects ul li .project-links {
   display: inline-block;

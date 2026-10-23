@@ -415,7 +415,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View Full Resume
+            View Resume
           </a>
         </div>
       </div>
@@ -446,22 +446,22 @@ export default function Home() {
                     <div className="d-flex align-items-center justify-content-between">
                       <p className="intro-text">Featured Project</p>
                     </div>
-                    <h3 className="fw-bold text-light-gray mt-1 pb-3">
+                    <h3 className="fw-bold text-light-gray mt-1 pb-1">
                       Senior Sense Solutions
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
-                        A full-stack IoT monitoring platform built and deployed
-                        on AWS EC2, enabling enabling sub-second ingestion and
-                        visualization of real-time health metrics from a
-                        connected wrist sensor device.
+                        A full-stack IoT platform deployed on EC2, 
+                        enabling sub-second ingestion and visualization of 
+                        real-time health metrics from a connected wrist sensor 
+                        device.
                         <br />
                         Contains dashboards for biometric monitoring, fall
                         detection, and device geolocation.
                       </p>
                     </div>
-                    {/* <ul className="project-skills text-light-gray">
-                      <li>React</li>
+                    <ul className="project-skills-odd text-gray">
+                      <li>React.js</li>
                       <li>Next.js</li>
                       <li>Express.js</li>
                       <li>TypeScript</li>
@@ -469,7 +469,7 @@ export default function Home() {
                       <li>CSS</li>
                       <li>PostgreSQL</li>
                       <li>AWS</li>
-                    </ul> */}
+                    </ul>
                     <div className="project-links">
                       <a
                         className="text-decoration-none ms-3"
@@ -495,20 +495,31 @@ export default function Home() {
                     <div className="d-flex align-items-center justify-content-between">
                       <p className="intro-text">Featured Project</p>
                     </div>
-                    <h3 className="fw-bold text-light-gray mt-1 pb-3">
+                    <h3 className="fw-bold text-light-gray mt-1 pb-1">
                       Fabflix
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
-                        A full-stack e-commerce application built and deployed
-                        on AWS EC2, enabling users to browse, sort, and search
+                        A full-stack e-commerce application deployed
+                        on EC2, enabling users to sort and search
                         across a 37,000+ movie dataset.
                         <br />
-                        Integrates an Apache load balancer to distribute
+                        Integrates Apache load balancer to distribute
                         traffic, and is scaled on a Kubernetes cluster spanning
-                        multiple nodes for high availability and scalability.
+                        multiple nodes for high availability.
                       </p>
                     </div>
+                    <ul className="project-skills-even text-gray">
+                      <li>JavaScript</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Java</li>
+                      <li>MySQL</li>
+                      <li>AWS</li>
+                      <li>Apache Tomcat</li>
+                      <li>Docker</li>
+                      <li>Kubernetes</li>
+                    </ul>
                     <div className="project-links">
                       <a
                         className="text-decoration-none ms-3"
@@ -534,8 +545,8 @@ export default function Home() {
                     <div className="d-flex align-items-center justify-content-between">
                       <p className="intro-text">Featured Project</p>
                     </div>
-                    <h3 className="fw-bold text-light-gray mt-1 pb-3">
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zotsearch
+                    <h3 className="fw-bold text-light-gray mt-1 pb-1">
+                      Zotsearch
                     </h3>
                     <div className="projects-description-box">
                       <p className="text-gray p-4 projects-description-text">
@@ -547,6 +558,15 @@ export default function Home() {
                         relevant search results.
                       </p>
                     </div>
+                    <ul className="project-skills-odd text-gray">
+                      <li>React.js</li>
+                      <li>Next.js</li>
+                      <li>Flask</li>
+                      <li>JavaScript</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Python</li>
+                    </ul>
                     <div className="project-links">
                       <a
                         className="text-decoration-none ms-3"
@@ -572,7 +592,7 @@ export default function Home() {
                     <div className="d-flex align-items-center justify-content-between">
                       <p className="intro-text">Featured Project</p>
                     </div>
-                    <h3 className="fw-bold text-light-gray mt-1 pb-3">
+                    <h3 className="fw-bold text-light-gray mt-1 pb-1">
                       iManager
                     </h3>
                     <div className="projects-description-box">
@@ -585,6 +605,14 @@ export default function Home() {
                         based on documents stored in Firestore database.
                       </p>
                     </div>
+                    <ul className="project-skills-even text-gray">
+                      <li>React.js</li>
+                      <li>Next.js</li>
+                      <li>JavaScript</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Firebase</li>
+                    </ul>
                     <div className="project-links">
                       <a
                         className="text-decoration-none ms-3"
